@@ -1,1 +1,51 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: "Baloo";
+    src:
+        local("Baloo"),
+        url("/font/Baloo-Regular.ttf") format("truetype"),
+}
+
+body {
+    font-family: "Rubik";
+}
+
+/* aaa */
+@theme inline {
+    --color-blue1: var(--clr-blue1);
+    --color-blue2: var(--clr-blue2);
+    --color-blue3: var(--clr-blue3);
+
+
+    --font-baloo: var(--font);
+
+}
+
+
+@layer base {
+    :root {
+        --clr-blue1: oklch(0.3731 0.1653 264.17);
+        --clr-blue2: oklch(0.5061 0.2314 264.13);
+        --clr-blue3: oklch(0.6315 0.1624 248.37);
+
+        --clr-red1: oklch(0.5474 0.2039 26);
+        --clr-red2: oklch(0.5909 0.2047 24.54);
+        /* --clr-red3: oklch(0.6315 0.1624 248.37);
+        --clr-red4: oklch(0.6315 0.1624 248.37);
+
+        --clr-blue1: oklch(0.3731 0.1653 264.17);
+        --clr-blue2: oklch(0.5061 0.2314 264.13);
+        --clr-blue3: oklch(0.6315 0.1624 248.37);
+        --clr-blue4: oklch(0.6315 0.1624 248.37); */
+
+
+        --font: 'Baloo';
+    }
+}
+
+@layer utilities {
+    .mono {
+        font-family: var(--font);
+    }
+}
