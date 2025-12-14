@@ -14,7 +14,7 @@ const basictl = gsap.timeline({
     start: "top 80%",          
     end: "bottom 30%",     
     markers: true,            
-    toggleActions: "play reverse play reverse"
+    toggleActions: "play none play reverse"
     // play = lance l’anim en descendant
     // reverse = rejoue en sens inverse quand tu remontes
   },
