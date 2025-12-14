@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="New_DA" data-name="New DA" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 465 729.96">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Dégradé_sans_nom_87);
+      }
+
+      .cls-2 {
+        fill: url(#Dégradé_sans_nom_386);
+      }
+
+      .cls-3 {
+        fill: url(#Dégradé_sans_nom_69);
+      }
+
+      .cls-4 {
+        fill: url(#Dégradé_sans_nom_146);
+      }
+
+      .cls-5 {
+        fill: url(#Dégradé_sans_nom_87-2);
+      }
+
+      .cls-6 {
+        fill: url(#Dégradé_sans_nom_69-2);
+      }
+
+      .cls-7 {
+        fill: url(#Dégradé_sans_nom_69-3);
+      }
+
+      .cls-8 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 5px;
+      }
+
+      .cls-9 {
+        fill: url(#Dégradé_sans_nom_120);
+      }
+
+      .cls-10 {
+        fill: url(#Dégradé_sans_nom_161);
+      }
+
+      .cls-11 {
+        fill: url(#Dégradé_sans_nom_87-3);
+      }
+
+      .cls-12 {
+        fill: #b0b2c4;
+      }
+    </style>
+    <linearGradient id="Dégradé_sans_nom_386" data-name="Dégradé sans nom 386" x1="465" y1="448.21" x2="73.79" y2="448.21" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#147547"/>
+      <stop offset="1" stop-color="#19955b"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_69" data-name="Dégradé sans nom 69" x1="376.67" y1="721.6" x2="55.12" y2="721.6" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#840d16"/>
+      <stop offset="1" stop-color="#cd2228"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_120" data-name="Dégradé sans nom 120" x1="124.86" y1="615.23" x2="124.86" y2="450.47" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1b8ee6"/>
+      <stop offset="1" stop-color="#1b51e6"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_146" data-name="Dégradé sans nom 146" x1="124.76" y1="451.94" x2="124.76" y2="615.23" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1b51e6"/>
+      <stop offset="1" stop-color="#103496"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_161" data-name="Dégradé sans nom 161" x1="125.41" y1="615.14" x2="125.41" y2="453.79" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#003251"/>
+      <stop offset="1" stop-color="#103496"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_87" data-name="Dégradé sans nom 87" x1="-1356.96" y1="751.55" x2="-1466.34" y2="751.55" gradientTransform="translate(1631.34 -504.42)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b0b2c4"/>
+      <stop offset="1" stop-color="#d2d3e0"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_87-2" data-name="Dégradé sans nom 87" x1="-1391.66" y1="538.91" x2="-1431.64" y2="538.91" gradientTransform="translate(1685.66 -497.36)" xlink:href="#Dégradé_sans_nom_87"/>
+    <linearGradient id="Dégradé_sans_nom_87-3" data-name="Dégradé sans nom 87" x1="-1364.92" y1="949.94" x2="-1458.38" y2="949.94" gradientTransform="translate(1580.66 -511)" xlink:href="#Dégradé_sans_nom_87"/>
+    <linearGradient id="Dégradé_sans_nom_69-2" data-name="Dégradé sans nom 69" x1="337.83" y1="195.19" x2="245.82" y2="195.19" xlink:href="#Dégradé_sans_nom_69"/>
+    <linearGradient id="Dégradé_sans_nom_69-3" data-name="Dégradé sans nom 69" x1="250.84" y1="628.22" x2="0" y2="628.22" xlink:href="#Dégradé_sans_nom_69"/>
+  </defs>
+  <g id="Recherche">
+    <path class="cls-2" d="M392.14,593.8c-18.13,18.13-38.57,33.12-60.66,44.69l27.21,74.75H73.79l32.94-86.71h116.9c111.7-3.9,201.37-95.99,201.37-208.64,0-92.89-60.98-171.8-145.01-198.8l19.06-35.9c34.63,12.18,66.37,32.07,93.09,58.8,46.99,46.98,72.86,109.46,72.86,175.9s-25.87,128.92-72.86,175.91Z"/>
+    <polygon class="cls-3" points="55.12 729.96 62.86 713.24 368.92 713.24 376.67 729.96 55.12 729.96"/>
+    <polygon class="cls-9" points="34.79 614.22 126.4 450.47 200.36 470.01 214.92 615.23 34.79 614.22"/>
+    <polygon class="cls-4" points="45.54 615.23 131.98 451.94 192.49 467.93 203.99 614.18 45.54 615.23"/>
+    <polygon class="cls-10" points="59.08 615.14 138.96 453.79 184.35 465.78 191.74 614.26 59.08 615.14"/>
+    <g>
+      <line class="cls-8" x1="186.24" y1="503.75" x2="189.5" y2="569.27"/>
+      <line class="cls-8" x1="184.65" y1="471.74" x2="185.44" y2="487.73"/>
+      <line class="cls-8" x1="135.99" y1="459.8" x2="109.37" y2="513.56"/>
+      <line class="cls-8" x1="76.28" y1="580.39" x2="59.08" y2="615.14"/>
+      <line class="cls-8" x1="92.37" y1="526.76" x2="82.49" y2="545.41"/>
+      <line class="cls-8" x1="134.31" y1="510.7" x2="112.89" y2="559.99"/>
+      <line class="cls-8" x1="198.37" y1="542.67" x2="201.92" y2="587.92"/>
+      <line class="cls-8" x1="203.26" y1="604.91" x2="203.99" y2="614.18"/>
+      <line class="cls-8" x1="156.76" y1="580.39" x2="156.76" y2="614.44"/>
+      <line class="cls-8" x1="171.77" y1="457.54" x2="173.54" y2="494.7"/>
+    </g>
+    <g id="Cam">
+      <rect class="cls-1" x="165" y="60.71" width="109.38" height="372.84" transform="translate(70.42 -47.92) rotate(14.8)"/>
+      <rect class="cls-5" x="254.02" y="13.96" width="39.98" height="55.16" transform="translate(19.7 -68.62) rotate(14.8)"/>
+      <rect x="205.43" y="56.83" width="123.76" height="20.13" transform="translate(25.96 -66.07) rotate(14.8)"/>
+      <rect x="254.97" y="6.23" width="51.42" height="20.13" transform="translate(13.48 -71.16) rotate(14.8)"/>
+      <rect x="127.7" y="440.44" width="76.49" height="20.13" transform="translate(120.59 -27.45) rotate(14.8)"/>
+      <rect class="cls-11" x="122.28" y="426.97" width="93.45" height="23.94" transform="translate(117.74 -28.61) rotate(14.8)"/>
+      <rect x="109.89" y="418.42" width="123.76" height="20.13" transform="translate(115.16 -29.66) rotate(14.8)"/>
+    </g>
+    <circle class="cls-6" cx="291.83" cy="195.19" r="46"/>
+    <circle class="cls-12" cx="291.83" cy="195.19" r="25.32"/>
+    <polygon class="cls-7" points="235.1 644.61 11.74 644.61 0 611.83 250.84 611.83 235.1 644.61"/>
+  </g>
+</svg>

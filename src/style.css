@@ -17,6 +17,21 @@ body {
     --color-blue2: var(--clr-blue2);
     --color-blue3: var(--clr-blue3);
 
+    --color-red1: var(--clr-red1);
+    --color-red2: var(--clr-red2);
+    --color-red3: var(--clr-red3);
+    --color-red4: var(--clr-red4);
+
+    --color-green1: var(--clr-green1);
+    --color-green2: var(--clr-green2);
+    --color-green3: var(--clr-green3);
+    --color-green4: var(--clr-green4);
+
+    --color-gray1: var(--clr-gray1);
+    --color-gray2: var(--clr-gray2);
+    --color-dark: var(--clr-dark);
+
+
 
     --font-baloo: var(--font);
 
