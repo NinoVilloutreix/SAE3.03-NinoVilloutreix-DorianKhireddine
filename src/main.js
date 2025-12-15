@@ -50,14 +50,14 @@ gsap.to(".section__body", {
 });
 // //////////////////////////// GRANDSECTION 4 ////////////////////////////
 gsap.to(".section__body", {
-  backgroundColor: "yellow", // couleur cible
+  backgroundColor: "--color-dark", // couleur cible
   duration: 1,
   scrollTrigger: {
     trigger: ".grandsection__4",
     start: "top center",
     end: "bottom center",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 
@@ -70,7 +70,7 @@ const planettl = gsap.timeline({
     trigger: ".section__planet",   
     start: "top 50%",          
     end: "bottom 50%",     
-    markers: true,            
+    // markers: true,            
     toggleActions: "play none play reverse"
   },
   yoyo: true
@@ -96,7 +96,7 @@ const regultl = gsap.timeline({
     trigger: ".section__regul",   
     start: "top 50%",          
     end: "bottom 50%",     
-    markers: true,            
+    // markers: true,            
     toggleActions: "play none play reverse"
   },
   yoyo: true
@@ -149,9 +149,9 @@ efferalgantl.to(".img__efferalgan", {
 const text1tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".section__text1",   
-    start: "top 50%",          
-    end: "bottom 50%",     
-    markers: true,            
+    start: "top 40%",          
+    end: "bottom 60%",     
+    // markers: true,            
     toggleActions: "play none play reverse"
   },
   yoyo: true
@@ -170,7 +170,7 @@ const dilatationtl = gsap.timeline({
     trigger: ".section__dilatation",   
     start: "top 50%",          
     end: "bottom 50%",     
-    markers: true,            
+    // markers: true,            
     toggleActions: "play none play reverse"
   },
   yoyo: true
@@ -196,7 +196,7 @@ const acidetl = gsap.timeline({
     trigger: ".section__acide",   
     start: "top 50%",          
     end: "bottom 50%",     
-    markers: true,            
+    // markers: true,            
     toggleActions: "play none play reverse"
   },
   yoyo: true
@@ -222,7 +222,7 @@ const monteetl = gsap.timeline({
     trigger: ".section__montee",   
     start: "top 50%",          
     end: "bottom 50%",     
-    markers: true,            
+    // markers: true,            
     toggleActions: "play none play reverse"
   },
   yoyo: true
@@ -246,6 +246,152 @@ monteetl.fromTo(
 const text2tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".section__text2",   
+    start: "top 60%",          
+    end: "bottom 40%",     
+    // markers: true,            
+    toggleActions: "play none play reverse"
+  },
+  yoyo: true
+});
+
+text2tl.fromTo(
+  ".section__text2",
+  { x: 0, opacity: 0, scale: 0 },
+  { x: 0, opacity: 1, duration: 0.5, scale: 1 , ease: "back.out"}
+);
+
+// ################## GLACIER ##################
+
+const glaciertl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".section__double",   
+    start: "top 50%",          
+    end: "bottom 50%",     
+    // markers: true,            
+    toggleActions: "play none play reverse"
+  },
+  yoyo: true
+});
+
+glaciertl.fromTo(
+  ".img__glacier",
+  { x: 500, opacity: 0, scale: 1 },
+  { x: 0, opacity: 1, duration: 1, scale: 3 , ease: "back.out"}
+);
+
+glaciertl.fromTo(
+  ".text__glacier",
+  { y: 0, opacity: 0, scale: 1 },
+  { y: 0, opacity: 1, duration: 1, scale: 1 },
+  "<"
+);
+
+// ################## OURS ##################
+
+const ourstl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".section__double",   
+    start: "top 50%",          
+    end: "bottom 50%",     
+    // markers: true,            
+    toggleActions: "play none play reverse"
+  },
+  yoyo: true
+});
+
+ourstl.fromTo(
+  ".img__ours",
+  { x: -500, opacity: 0, scale: 1 },
+  { x: 0, opacity: 1, duration: 1, scale: 3, ease: "back.out"}
+);
+
+ourstl.fromTo(
+  ".text__ours",
+  { y: 0, opacity: 0, scale: 1 },
+  { y: 0, opacity: 1, duration: 1, scale: 1 },
+  "<"
+);
+
+// ################## TEXT3 ##################
+
+const text3tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".section__text3",   
+    start: "top 50%",          
+    end: "bottom 50%",     
+    // markers: true,            
+    toggleActions: "play none play reverse"
+  },
+  yoyo: true
+});
+
+text3tl.fromTo(
+  ".section__text3",
+  { y: -100, opacity: 0, scale: 0 },
+  { y: 0, opacity: 1, duration: 1, scale: 1 , ease: "bounce.out"}
+);
+
+// ################## 100KM ##################
+
+const kmtl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".section__km",   
+    start: "top 50%",          
+    end: "bottom 50%",     
+    // markers: true,            
+    toggleActions: "play none play reverse"
+  },
+  yoyo: true
+});
+
+kmtl.fromTo(
+  ".img__km",
+  { y: 200, opacity: 0, scaleX: 5, scaleY: 0 },
+  { y: 0, opacity: 1, duration: 1, scaleX: 3, scaleY:3, ease:"elastic.out"}
+);
+
+kmtl.fromTo(
+  ".text__km",
+  { y: 100, opacity: 0, scale: 1 },
+  { y: 0, opacity: 1, duration: 1, scale: 1 },
+  "<"
+);
+// ################## BOITE ##################
+
+const lignes = gsap.utils.toArray(".section__boite");
+const total = lignes.length;
+
+lignes.forEach((ligne, i) => {
+  gsap.from(ligne.querySelectorAll("img"), {
+    y: -200,
+    opacity: 0,
+    duration: 1,
+    ease: "bounce.out",
+    stagger: 0.2, 
+    delay: (total - 1 - i) * 0.5,
+    scrollTrigger: {
+      trigger: ".section__boite",
+      // markers: true,
+      start: "top 10%",
+      end: "bottom 50%",
+      toggleActions: "play none play reverse"
+    }
+  });
+});
+
+
+boitetl.fromTo(
+  ".text__boite",
+  { y: 100, opacity: 0, scale: 1 },
+  { y: 0, opacity: 1, duration: 1, scale: 1 },
+  "<"
+);
+
+// ################## ILE ##################
+
+const iletl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".section__ile",   
     start: "top 50%",          
     end: "bottom 50%",     
     markers: true,            
@@ -254,8 +400,15 @@ const text2tl = gsap.timeline({
   yoyo: true
 });
 
-text2tl.fromTo(
-  ".section__text2",
-  { x: -100, opacity: 0, scale: 1 },
-  { x: 0, opacity: 1, duration: 1, scale: 1 , ease: "elastic.out"}
+iletl.fromTo(
+  ".img__ile",
+  { x: 500, opacity: 0, scale: 1 },
+  { x: 0, opacity: 1, duration: 1, scale: 3 }
+);
+
+iletl.fromTo(
+  ".text__ile",
+  { y: 100, opacity: 0, scale: 1 },
+  { y: 0, opacity: 1, duration: 1, scale: 1 },
+  "<"
 );
