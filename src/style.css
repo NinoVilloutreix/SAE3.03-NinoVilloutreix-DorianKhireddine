@@ -7,8 +7,15 @@
         url("/font/Baloo-Regular.ttf") format("truetype"),
 }
 
+html{
+    scroll-behavior: smooth;
+    
+}
+
+
 body {
     font-family: "Rubik";
+    
 }
 
 /* aaa */
