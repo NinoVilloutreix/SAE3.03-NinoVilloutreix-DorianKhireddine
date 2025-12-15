@@ -78,8 +78,8 @@ const planettl = gsap.timeline({
 
 planettl.fromTo(
   ".img__planet",
-  { xPercent: 500, opacity: 0, scale: 1 },
-  { xPercent: 0, opacity: 1, duration: 1, scale: 3 }
+  { x: 500, opacity: 0, scale: 1 },
+  { x: 0, opacity: 1, duration: 1, scale: 3 }
 );
 
 planettl.fromTo(
@@ -187,4 +187,75 @@ dilatationtl.fromTo(
   { y: 100, opacity: 0, scale: 1 },
   { y: 0, opacity: 1, duration: 1, scale: 1 },
   "<"
+);
+
+// ################## ACIDE ##################
+
+const acidetl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".section__acide",   
+    start: "top 50%",          
+    end: "bottom 50%",     
+    markers: true,            
+    toggleActions: "play none play reverse"
+  },
+  yoyo: true
+});
+
+acidetl.fromTo(
+  ".img__acide",
+  { x: 500, opacity: 0, scale: 1 },
+  { x: 0, opacity: 1, duration: 1, scale: 3 }
+);
+
+acidetl.fromTo(
+  ".text__acide",
+  { x: -500, opacity: 0, scale: 1 },
+  { x: 0, opacity: 1, duration: 1, scale: 1 },
+  "<"
+);
+
+// ################## MONTEE ##################
+
+const monteetl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".section__montee",   
+    start: "top 50%",          
+    end: "bottom 50%",     
+    markers: true,            
+    toggleActions: "play none play reverse"
+  },
+  yoyo: true
+});
+
+monteetl.fromTo(
+  ".img__montee",
+  { x: -500, opacity: 0, scale: 1 },
+  { x: 0, opacity: 1, duration: 1, scale: 3 }
+);
+
+monteetl.fromTo(
+  ".text__montee",
+  { y: 100, opacity: 0, scale: 1 },
+  { y: 0, opacity: 1, duration: 1, scale: 1 },
+  "<"
+);
+
+// ################## TEXT2 ##################
+
+const text2tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".section__text2",   
+    start: "top 50%",          
+    end: "bottom 50%",     
+    markers: true,            
+    toggleActions: "play none play reverse"
+  },
+  yoyo: true
+});
+
+text2tl.fromTo(
+  ".section__text2",
+  { x: -100, opacity: 0, scale: 1 },
+  { x: 0, opacity: 1, duration: 1, scale: 1 , ease: "elastic.out"}
 );

@@ -15,8 +15,9 @@ html{
 
 body {
     font-family: "Rubik";
-    
+    overflow-x: hidden;
 }
+
 
 /* aaa */
 @theme inline {
