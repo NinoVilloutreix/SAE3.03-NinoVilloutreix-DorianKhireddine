@@ -4,7 +4,6 @@ import "./style.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to(".object", { rotation : 360, duration: 2, repeat: -1, ease: "inoutcirc", yoyo: true})
 
 
 
@@ -12,54 +11,35 @@ gsap.to(".object", { rotation : 360, duration: 2, repeat: -1, ease: "inoutcirc",
 
 
 
-// //////////////////////////// GRANDSECTION 1 ////////////////////////////
-gsap.to(".section__body", {
-  backgroundColor: "var(--color-blue1)", // couleur cible
-  duration: 1,
-  scrollTrigger: {
-    trigger: ".grandsection__1",
-    start: "top center",   // quand le haut de la section atteint le centre du viewport
-    end: "bottom center",  // quand le bas atteint le centre
-    toggleActions: "play none none reverse"
-    // markers: true,
-  },
-});
-// //////////////////////////// GRANDSECTION 2 ////////////////////////////
-gsap.to(".section__body", {
-  backgroundColor: "var(--color-green1)", // couleur cible
-  duration: 1,
-  scrollTrigger: {
-    trigger: ".grandsection__2",
-    start: "top center",   // quand le haut de la section atteint le centre du viewport
-    end: "bottom center",  // quand le bas atteint le centre
-    toggleActions: "play none none reverse"
-    // markers: true,
-  },
-});
-// //////////////////////////// GRANDSECTION 3 ////////////////////////////
-gsap.to(".section__body", {
-  backgroundColor: "var(--color-red1)", // couleur cible
-  duration: 1,
-  scrollTrigger: {
-    trigger: ".grandsection__3",
-    start: "top center",   // quand le haut de la section atteint le centre du viewport
-    end: "bottom center",  // quand le bas atteint le centre
-    toggleActions: "play none none reverse"
-    // markers: true,
-  },
-});
-// //////////////////////////// GRANDSECTION 4 ////////////////////////////
-gsap.to(".section__body", {
-  backgroundColor: "--color-dark", // couleur cible
-  duration: 1,
-  scrollTrigger: {
-    trigger: ".grandsection__4",
+
+
+const sections = document.querySelectorAll(".grandsection");
+
+
+sections.forEach((section) => {
+  const color = section.getAttribute("data-bgcolor");
+
+
+  ScrollTrigger.create({
+    trigger: section,
     start: "top center",
     end: "bottom center",
-    toggleActions: "play none none reverse",
-    // markers: true,
-  },
+    markers: true,
+    onEnter: () =>
+      gsap.to("body", {
+        backgroundColor: color,
+        duration: 1,
+        ease: "power2.out",
+      }),
+    onEnterBack: () =>
+      gsap.to("body", {
+        backgroundColor: color,
+        duration: 1,
+        ease: "power2.out",
+      }),
+  });
 });
+
 
 
 
@@ -67,9 +47,9 @@ gsap.to(".section__body", {
 
 const planettl = gsap.timeline({
   scrollTrigger: {
-    trigger: ".section__planet",   
-    start: "top 50%",          
-    end: "bottom 50%",     
+    trigger: ".section__planet",
+    start: "top 50%",
+    end: "bottom 50%",
     // markers: true,            
     toggleActions: "play none play reverse"
   },
@@ -93,9 +73,9 @@ planettl.fromTo(
 
 const regultl = gsap.timeline({
   scrollTrigger: {
-    trigger: ".section__regul",   
-    start: "top 50%",          
-    end: "bottom 50%",     
+    trigger: ".section__regul",
+    start: "top 50%",
+    end: "bottom 50%",
     // markers: true,            
     toggleActions: "play none play reverse"
   },
@@ -119,9 +99,9 @@ regultl.fromTo(
 
 const efferalgantl = gsap.timeline({
   scrollTrigger: {
-    trigger: ".section__efferalgan",   
-    start: "top 50%",          
-    end: "bottom 50%",     
+    trigger: ".section__efferalgan",
+    start: "top 50%",
+    end: "bottom 50%",
     // markers: true,            
     toggleActions: "play none play reverse",
     scrub: true
@@ -132,7 +112,7 @@ const efferalgantl = gsap.timeline({
 
 efferalgantl.fromTo(".img__efferalgan",
   { y: -1000, opacity: 0, scale: 1 },
-  { y: -200, opacity: 1, scale: 3, ease: "circ.out"}
+  { y: -200, opacity: 1, scale: 3, ease: "circ.out" }
 );
 
 
@@ -148,9 +128,9 @@ efferalgantl.to(".img__efferalgan", {
 
 const text1tl = gsap.timeline({
   scrollTrigger: {
-    trigger: ".section__text1",   
-    start: "top 40%",          
-    end: "bottom 60%",     
+    trigger: ".section__text1",
+    start: "top 40%",
+    end: "bottom 60%",
     // markers: true,            
     toggleActions: "play none play reverse"
   },
@@ -160,16 +140,16 @@ const text1tl = gsap.timeline({
 text1tl.fromTo(
   ".section__text1",
   { x: -100, opacity: 0, scale: 1 },
-  { x: 0, opacity: 1, duration: 1, scale: 1 , ease: "elastic.out"}
+  { x: 0, opacity: 1, duration: 1, scale: 1, ease: "elastic.out" }
 );
 
 // ################## DILATATION ##################
 
 const dilatationtl = gsap.timeline({
   scrollTrigger: {
-    trigger: ".section__dilatation",   
-    start: "top 50%",          
-    end: "bottom 50%",     
+    trigger: ".section__dilatation",
+    start: "top 50%",
+    end: "bottom 50%",
     // markers: true,            
     toggleActions: "play none play reverse"
   },
@@ -178,8 +158,8 @@ const dilatationtl = gsap.timeline({
 
 dilatationtl.fromTo(
   ".img__dilatation",
-  { x: -100, y:-100, opacity: 0, scale: 1 },
-  { x: 0, y:0, opacity: 1, duration: 1, scale: 3 }
+  { x: -100, y: -100, opacity: 0, scale: 1 },
+  { x: 0, y: 0, opacity: 1, duration: 1, scale: 3 }
 );
 
 dilatationtl.fromTo(
@@ -193,9 +173,9 @@ dilatationtl.fromTo(
 
 const acidetl = gsap.timeline({
   scrollTrigger: {
-    trigger: ".section__acide",   
-    start: "top 50%",          
-    end: "bottom 50%",     
+    trigger: ".section__acide",
+    start: "top 50%",
+    end: "bottom 50%",
     // markers: true,            
     toggleActions: "play none play reverse"
   },
@@ -219,9 +199,9 @@ acidetl.fromTo(
 
 const monteetl = gsap.timeline({
   scrollTrigger: {
-    trigger: ".section__montee",   
-    start: "top 50%",          
-    end: "bottom 50%",     
+    trigger: ".section__montee",
+    start: "top 50%",
+    end: "bottom 50%",
     // markers: true,            
     toggleActions: "play none play reverse"
   },
@@ -245,9 +225,9 @@ monteetl.fromTo(
 
 const text2tl = gsap.timeline({
   scrollTrigger: {
-    trigger: ".section__text2",   
-    start: "top 60%",          
-    end: "bottom 40%",     
+    trigger: ".section__text2",
+    start: "top 60%",
+    end: "bottom 40%",
     // markers: true,            
     toggleActions: "play none play reverse"
   },
@@ -257,16 +237,16 @@ const text2tl = gsap.timeline({
 text2tl.fromTo(
   ".section__text2",
   { x: 0, opacity: 0, scale: 0 },
-  { x: 0, opacity: 1, duration: 0.5, scale: 1 , ease: "back.out"}
+  { x: 0, opacity: 1, duration: 0.5, scale: 1, ease: "back.out" }
 );
 
 // ################## GLACIER ##################
 
 const glaciertl = gsap.timeline({
   scrollTrigger: {
-    trigger: ".section__double",   
-    start: "top 50%",          
-    end: "bottom 50%",     
+    trigger: ".section__double",
+    start: "top 50%",
+    end: "bottom 50%",
     // markers: true,            
     toggleActions: "play none play reverse"
   },
@@ -276,7 +256,7 @@ const glaciertl = gsap.timeline({
 glaciertl.fromTo(
   ".img__glacier",
   { x: 500, opacity: 0, scale: 1 },
-  { x: 0, opacity: 1, duration: 1, scale: 3 , ease: "back.out"}
+  { x: 0, opacity: 1, duration: 1, scale: 3, ease: "back.out" }
 );
 
 glaciertl.fromTo(
@@ -290,9 +270,9 @@ glaciertl.fromTo(
 
 const ourstl = gsap.timeline({
   scrollTrigger: {
-    trigger: ".section__double",   
-    start: "top 50%",          
-    end: "bottom 50%",     
+    trigger: ".section__double",
+    start: "top 50%",
+    end: "bottom 50%",
     // markers: true,            
     toggleActions: "play none play reverse"
   },
@@ -302,7 +282,7 @@ const ourstl = gsap.timeline({
 ourstl.fromTo(
   ".img__ours",
   { x: -500, opacity: 0, scale: 1 },
-  { x: 0, opacity: 1, duration: 1, scale: 3, ease: "back.out"}
+  { x: 0, opacity: 1, duration: 1, scale: 3, ease: "back.out" }
 );
 
 ourstl.fromTo(
@@ -316,9 +296,9 @@ ourstl.fromTo(
 
 const text3tl = gsap.timeline({
   scrollTrigger: {
-    trigger: ".section__text3",   
-    start: "top 50%",          
-    end: "bottom 50%",     
+    trigger: ".section__text3",
+    start: "top 50%",
+    end: "bottom 50%",
     // markers: true,            
     toggleActions: "play none play reverse"
   },
@@ -328,16 +308,16 @@ const text3tl = gsap.timeline({
 text3tl.fromTo(
   ".section__text3",
   { y: -100, opacity: 0, scale: 0 },
-  { y: 0, opacity: 1, duration: 1, scale: 1 , ease: "bounce.out"}
+  { y: 0, opacity: 1, duration: 1, scale: 1, ease: "bounce.out" }
 );
 
 // ################## 100KM ##################
 
 const kmtl = gsap.timeline({
   scrollTrigger: {
-    trigger: ".section__km",   
-    start: "top 50%",          
-    end: "bottom 50%",     
+    trigger: ".section__km",
+    start: "top 50%",
+    end: "bottom 50%",
     // markers: true,            
     toggleActions: "play none play reverse"
   },
@@ -347,7 +327,7 @@ const kmtl = gsap.timeline({
 kmtl.fromTo(
   ".img__km",
   { y: 200, opacity: 0, scaleX: 5, scaleY: 0 },
-  { y: 0, opacity: 1, duration: 1, scaleX: 3, scaleY:3, ease:"elastic.out"}
+  { y: 0, opacity: 1, duration: 1, scaleX: 3, scaleY: 3, ease: "elastic.out" }
 );
 
 kmtl.fromTo(
@@ -365,14 +345,14 @@ lignes.forEach((ligne, i) => {
   gsap.from(ligne.querySelectorAll("img"), {
     y: -200,
     opacity: 0,
-    duration: 1,
+    duration: 0.5,
     ease: "bounce.out",
-    stagger: 0.2, 
+    stagger: 0.1,
     delay: (total - 1 - i) * 0.5,
     scrollTrigger: {
       trigger: ".section__boite",
       // markers: true,
-      start: "top 10%",
+      start: "top 30%",
       end: "bottom 50%",
       toggleActions: "play none play reverse"
     }
@@ -387,28 +367,24 @@ boitetl.fromTo(
   "<"
 );
 
-// ################## ILE ##################
 
-const iletl = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".section__ile",   
-    start: "top 50%",          
-    end: "bottom 50%",     
-    markers: true,            
-    toggleActions: "play none play reverse"
-  },
-  yoyo: true
-});
 
-iletl.fromTo(
-  ".img__ile",
-  { x: 500, opacity: 0, scale: 1 },
-  { x: 0, opacity: 1, duration: 1, scale: 3 }
-);
 
-iletl.fromTo(
-  ".text__ile",
-  { y: 100, opacity: 0, scale: 1 },
-  { y: 0, opacity: 1, duration: 1, scale: 1 },
-  "<"
-);
+// ************************** Oubliettes
+
+// const gs2tl = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".grandsection__2",
+//     start: "top 50%",
+//     end: "bottom 50%",
+//     // markers: true,
+//     toggleActions: "play none play reverse"
+//   },
+// });
+
+
+// gs2tl.fromTo(".section__body",
+//   { backgroundColor: gsap.getProperty(".section__body", "backgroundColor")},
+//   { backgroundColor: "var(--color-green1)", duration: 1,}
+
+// );
