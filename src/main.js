@@ -24,7 +24,7 @@ sections.forEach((section) => {
     trigger: section,
     start: "top center",
     end: "bottom center",
-    markers: true,
+    // markers: true,
     onEnter: () =>
       gsap.to("body", {
         backgroundColor: color,
@@ -76,7 +76,7 @@ const regultl = gsap.timeline({
     trigger: ".section__regul",
     start: "top 80%",
     end: "bottom 50%",
-    markers: true,            
+    // markers: true,            
     toggleActions: "play none play reverse"
   }
 }
@@ -95,13 +95,13 @@ regultl.fromTo(
   "<"
 );
 
-// Animation de houle en continu
+// Houle
 gsap.to(".img__regul", {
-  x: "+=100",            // déplacement vers la gauche
-  duration: 1,          // durée d’un cycle
-  ease: "sine.inOut",   // easing doux, imitant les vagues
-  repeat: -1,           // boucle infinie
-  yoyo: true            // revient en arrière pour créer l’effet de va-et-vient
+  x: "+=100",
+  duration: 1,
+  ease: "sine.inOut",
+  repeat: -1,
+  yoyo: true
 });
 
 
@@ -158,9 +158,9 @@ text1tl.fromTo(
 const dilatationtl = gsap.timeline({
   scrollTrigger: {
     trigger: ".section__dilatation",
-    start: "top 50%",
+    start: "top 40%",
     end: "bottom 50%",
-    // markers: true,            
+    markers: true,            
     toggleActions: "play none play reverse"
   },
   yoyo: true
@@ -168,16 +168,62 @@ const dilatationtl = gsap.timeline({
 
 dilatationtl.fromTo(
   ".img__dilatation",
-  { x: -100, y: -100, opacity: 0, scale: 1 },
-  { x: 0, y: 0, opacity: 1, duration: 1, scale: 3 }
+  { x: -100, y: -100, opacity: 0, scale: 8 },
+  { x: 300, y: -100, opacity: 1, duration: 0.5, scale: 7 }
 );
 
 dilatationtl.fromTo(
   ".text__dilatation",
   { y: 100, opacity: 0, scale: 1 },
   { y: 0, opacity: 1, duration: 1, scale: 1 },
-  "<"
+  "<0.3"
 );
+
+
+dilatationtl.fromTo(
+  ".img__warning",
+  { x: -250, y: -300, opacity: 1, scale: 0, rotation: 45 },
+  { x: -200, y: -250, opacity: 1, duration: 1, scale: 1, rotation: 0, ease: "elastic.out"},
+  "<0.3"
+);
+
+dilatationtl.fromTo(
+  ".img__arrow1",
+  { x: -250, y: -300, opacity: 0, scaleX: -0.5, scaleY: 0.5, rotation: 0 },
+  { x: 0, y: -200, opacity: 1, duration: 0.5, scaleX: -1, scaleY: 1, rotation: -45, ease: "back.out"},
+  "<0.3"
+);
+
+dilatationtl.fromTo(
+  ".img__arrow2",
+  { x: -400, y: 100, opacity: 0, scale: 0.5, rotation: 0 },
+  { x: -300, y: 200, opacity: 1, duration: 0.5, scale: 1.5, rotation: -60, ease: "back.out"},
+  "<0.3"
+);
+
+
+
+let svg = document.querySelector("svg");
+let path = svg.querySelector("path");
+
+const length = path.getTotalLength();
+
+gsap.set(path, {
+  strokeDasharray: `${length} ${length}`,
+  strokeDashoffset: length
+});
+
+dilatationtl.to(path, {
+  strokeDashoffset: 0,
+  duration: 2
+});
+
+
+
+
+
+
+
 
 // ################## ACIDE ##################
 

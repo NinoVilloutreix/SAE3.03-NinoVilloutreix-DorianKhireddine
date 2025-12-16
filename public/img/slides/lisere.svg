@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="New_DA" data-name="New DA" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 884.68 769.46">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #dd343a;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 5px;
+      }
+
+      .cls-2 {
+        stroke-dasharray: 12.02 12.02;
+      }
+    </style>
+  </defs>
+  <g id="Dilatation-2" data-name="Dilatation">
+    <g>
+      <path class="cls-1" d="M2.5,642.44s.03,2.27.41,5.98"/>
+      <path class="cls-2" d="M4.75,660.28c5.05,24.01,21.42,62.2,74.39,48.35,75.48-19.74,97.55,38.32,139.35,48.77,41.81,10.45,232.26,31.35,233.42-62.71,1.16-94.06,188.13-33.68,250.84-82.45,62.71-48.77,70.84-127.74,52.26-197.42-18.58-69.68,112.65-89.42,125.42-132.39s-48.77-103.35-45.29-168.39c2.74-51.05-50.36-90.7-73.31-105.38"/>
+      <path class="cls-1" d="M756.73,5.49c-3.27-1.97-5.19-2.99-5.19-2.99"/>
+    </g>
+  </g>
+</svg>

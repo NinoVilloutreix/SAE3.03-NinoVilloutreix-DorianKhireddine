@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="New_DA" data-name="New DA" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 129.41 147.55">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: url(#Dégradé_sans_nom_261);
+        stroke-miterlimit: 10;
+        stroke-width: 10px;
+      }
+
+      .cls-2 {
+        fill: #d2d3e0;
+        font-family: Baloo-Regular, Baloo;
+        font-size: 100px;
+      }
+    </style>
+    <linearGradient id="Dégradé_sans_nom_261" data-name="Dégradé sans nom 261" x1="0" y1="57.64" x2="129.41" y2="57.64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#cd2228"/>
+      <stop offset="1" stop-color="#dd343a"/>
+    </linearGradient>
+  </defs>
+  <g id="Dilatation-2" data-name="Dilatation">
+    <g>
+      <path class="cls-1" d="M58.59,8.53L5.96,99.69c-2.72,4.71.68,10.6,6.12,10.6h105.26c5.44,0,8.84-5.89,6.12-10.6L70.82,8.53c-2.72-4.71-9.52-4.71-12.23,0Z"/>
+      <text class="cls-2" transform="translate(49.81 95.15)"><tspan x="0" y="0">!</tspan></text>
+    </g>
+  </g>
+</svg>
