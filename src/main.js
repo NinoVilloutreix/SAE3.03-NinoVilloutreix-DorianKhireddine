@@ -6,13 +6,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 
-
-
-
-
-
-
-
 const sections = document.querySelectorAll(".grandsection");
 
 
@@ -39,6 +32,8 @@ sections.forEach((section) => {
       }),
   });
 });
+
+// RIVER
 
 
 
@@ -158,7 +153,7 @@ text1tl.fromTo(
 const dilatationtl = gsap.timeline({
   scrollTrigger: {
     trigger: ".section__dilatation",
-    start: "top 40%",
+    start: "top 45%",
     end: "bottom 50%",
     markers: true,            
     toggleActions: "play none play reverse"
@@ -203,7 +198,7 @@ dilatationtl.fromTo(
 
 
 
-let svg = document.querySelector("svg");
+let svg = document.querySelector(".img__lisere-container");
 let path = svg.querySelector("path");
 
 const length = path.getTotalLength();
