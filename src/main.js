@@ -74,26 +74,36 @@ planettl.fromTo(
 const regultl = gsap.timeline({
   scrollTrigger: {
     trigger: ".section__regul",
-    start: "top 50%",
+    start: "top 80%",
     end: "bottom 50%",
-    // markers: true,            
+    markers: true,            
     toggleActions: "play none play reverse"
-  },
-  yoyo: true
-});
+  }
+}
+);
 
 regultl.fromTo(
   ".img__regul",
-  { x: -500, opacity: 0, scale: 1 },
-  { x: 0, opacity: 1, duration: 1, scale: 3 }
+  { y: 100, opacity: 0, scale: 10 },
+  { y: 0, opacity: 1, duration: 1, scale: 10 }
 );
 
 regultl.fromTo(
   ".text__regul",
-  { y: 100, opacity: 0, scale: 1 },
-  { y: 0, opacity: 1, duration: 1, scale: 1 },
+  { y: 0, opacity: 0, scale: 1 },
+  { y: -400, opacity: 1, duration: 1, scale: 1 },
   "<"
 );
+
+// Animation de houle en continu
+gsap.to(".img__regul", {
+  x: "+=100",            // déplacement vers la gauche
+  duration: 1,          // durée d’un cycle
+  ease: "sine.inOut",   // easing doux, imitant les vagues
+  repeat: -1,           // boucle infinie
+  yoyo: true            // revient en arrière pour créer l’effet de va-et-vient
+});
+
 
 // ################## EFFERALGAN ##################
 
@@ -118,7 +128,7 @@ efferalgantl.fromTo(".img__efferalgan",
 
 
 efferalgantl.to(".img__efferalgan", {
-  y: 1000,
+  y: 50,
   opacity: 0,
   scale: 1,
   ease: "circ.in",
