@@ -1,0 +1,39 @@
+name: Deploy site
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js (si nécessaire)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies (si package.json présent)
+        run: npm ci
+        continue-on-error: true
+
+      - name: Build (si script build défini)
+        run: npm run build --if-present
+
+      - name: Determine publish directory
+        id: publish-dir
+        run: |
+          if [ -d "dist" ]; then echo "dir=dist" >> $GITHUB_OUTPUT
+          elif [ -d "build" ]; then echo "dir=build" >> $GITHUB_OUTPUT
+          else echo "dir=." >> $GITHUB_OUTPUT
+          fi
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ${{ steps.publish-dir.outputs.dir }}
