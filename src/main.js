@@ -1,9 +1,12 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import DrawSVGPlugin from "gsap/DrawSVGPlugin";
 import "./style.css";
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(DrawSVGPlugin);
 
+console.log(DrawSVGPlugin);
 
 
 const sections = document.querySelectorAll(".grandsection");
@@ -13,6 +16,8 @@ sections.forEach((section) => {
   const color = section.getAttribute("data-bgcolor");
 
 
+  gsap.from(".img__riviere", { drawSVG: "0%", duration: 2 });
+  
   ScrollTrigger.create({
     trigger: section,
     start: "top center",
@@ -34,6 +39,29 @@ sections.forEach((section) => {
 });
 
 // RIVER
+let svg2 = document.querySelector(".img__riviere-container");
+let path2 = svg2.querySelector(".img__riviere");
+
+const pathLength2 = path2.getTotalLength();
+console.log(pathLength2);
+
+gsap.set(path2, {
+  strokeDasharray: `${pathLength2} ${pathLength2}`,
+  strokeDashoffset: pathLength2
+});
+
+
+gsap.to(path2, {
+  strokeDashoffset: 0,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".img__riviere-container",
+    start: "top top",
+    end: "bottom bottom",
+    scrub: 1
+  }
+});
+
 
 
 
@@ -199,7 +227,7 @@ dilatationtl.fromTo(
 
 
 let svg = document.querySelector(".img__lisere-container");
-let path = svg.querySelector("path");
+let path = svg.querySelector(".img__lisere");
 
 const length = path.getTotalLength();
 
@@ -364,59 +392,59 @@ text3tl.fromTo(
 
 // ################## 100KM ##################
 
-const kmtl = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".section__km",
-    start: "top 50%",
-    end: "bottom 50%",
-    // markers: true,            
-    toggleActions: "play none play reverse"
-  },
-  yoyo: true
-});
+// const kmtl = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".section__km",
+//     start: "top 50%",
+//     end: "bottom 50%",
+//     // markers: true,            
+//     toggleActions: "play none play reverse"
+//   },
+//   yoyo: true
+// });
 
-kmtl.fromTo(
-  ".img__km",
-  { y: 200, opacity: 0, scaleX: 5, scaleY: 0 },
-  { y: 0, opacity: 1, duration: 1, scaleX: 3, scaleY: 3, ease: "elastic.out" }
-);
+// kmtl.fromTo(
+//   ".img__km",
+//   { y: 200, opacity: 0, scaleX: 5, scaleY: 0 },
+//   { y: 0, opacity: 1, duration: 1, scaleX: 3, scaleY: 3, ease: "elastic.out" }
+// );
 
-kmtl.fromTo(
-  ".text__km",
-  { y: 100, opacity: 0, scale: 1 },
-  { y: 0, opacity: 1, duration: 1, scale: 1 },
-  "<"
-);
+// kmtl.fromTo(
+//   ".text__km",
+//   { y: 100, opacity: 0, scale: 1 },
+//   { y: 0, opacity: 1, duration: 1, scale: 1 },
+//   "<"
+// );
 // ################## BOITE ##################
 
-const lignes = gsap.utils.toArray(".section__boite");
-const total = lignes.length;
+// const lignes = gsap.utils.toArray(".section__boite");
+// const total = lignes.length;
 
-lignes.forEach((ligne, i) => {
-  gsap.from(ligne.querySelectorAll("img"), {
-    y: -200,
-    opacity: 0,
-    duration: 0.5,
-    ease: "bounce.out",
-    stagger: 0.1,
-    delay: (total - 1 - i) * 0.5,
-    scrollTrigger: {
-      trigger: ".section__boite",
-      // markers: true,
-      start: "top 30%",
-      end: "bottom 50%",
-      toggleActions: "play none play reverse"
-    }
-  });
-});
+// lignes.forEach((ligne, i) => {
+//   gsap.from(ligne.querySelectorAll("img"), {
+//     y: -200,
+//     opacity: 0,
+//     duration: 0.5,
+//     ease: "bounce.out",
+//     stagger: 0.1,
+//     delay: (total - 1 - i) * 0.5,
+//     scrollTrigger: {
+//       trigger: ".section__boite",
+//       // markers: true,
+//       start: "top 30%",
+//       end: "bottom 50%",
+//       toggleActions: "play none play reverse"
+//     }
+//   });
+// });
 
 
-boitetl.fromTo(
-  ".text__boite",
-  { y: 100, opacity: 0, scale: 1 },
-  { y: 0, opacity: 1, duration: 1, scale: 1 },
-  "<"
-);
+// boitetl.fromTo(
+//   ".text__boite",
+//   { y: 100, opacity: 0, scale: 1 },
+//   { y: 0, opacity: 1, duration: 1, scale: 1 },
+//   "<"
+// );
 
 
 

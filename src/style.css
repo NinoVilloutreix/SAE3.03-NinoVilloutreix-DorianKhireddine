@@ -9,14 +9,16 @@
 
 html{
     scroll-behavior: smooth;
-    
+    height: 100%;
 }
 
 
 body {
     font-family: "Rubik";
     overflow-x: hidden;
+    height: 100%;
 }
+
 
 
 /* TEST */
