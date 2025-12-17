@@ -16,13 +16,12 @@ sections.forEach((section) => {
   const color = section.getAttribute("data-bgcolor");
 
 
-  gsap.from(".img__riviere", { drawSVG: "0%", duration: 2 });
   
   ScrollTrigger.create({
     trigger: section,
     start: "top center",
     end: "bottom center",
-    // markers: true,
+    markers: true,
     onEnter: () =>
       gsap.to("body", {
         backgroundColor: color,
@@ -37,33 +36,6 @@ sections.forEach((section) => {
       }),
   });
 });
-
-// RIVER
-let svg2 = document.querySelector(".img__riviere-container");
-let path2 = svg2.querySelector(".img__riviere");
-
-const pathLength2 = path2.getTotalLength();
-console.log(pathLength2);
-
-gsap.set(path2, {
-  strokeDasharray: `${pathLength2} ${pathLength2}`,
-  strokeDashoffset: pathLength2
-});
-
-
-gsap.to(path2, {
-  strokeDashoffset: 0,
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".img__riviere-container",
-    start: "top top",
-    end: "bottom bottom",
-    scrub: 1
-  }
-});
-
-
-
 
 
 // ################## PLANET ##################
@@ -224,7 +196,13 @@ dilatationtl.fromTo(
   "<0.3"
 );
 
-
+dilatationtl.set(
+  ".img__lisere-container",
+  {
+    scale: 2.0
+  }
+  
+)
 
 let svg = document.querySelector(".img__lisere-container");
 let path = svg.querySelector(".img__lisere");
@@ -233,7 +211,7 @@ const length = path.getTotalLength();
 
 gsap.set(path, {
   strokeDasharray: `${length} ${length}`,
-  strokeDashoffset: length
+  strokeDashoffset: length,
 });
 
 dilatationtl.to(path, {
