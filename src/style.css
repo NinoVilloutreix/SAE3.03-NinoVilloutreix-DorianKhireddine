@@ -21,19 +21,7 @@ body {
 
 
 
-/* TEST */
 
-/* Assurez-vous que .horizontal-scroll-wrapper ne soit pas limité en largeur */
-.horizontal-scroll-wrapper {
-    width: 300vw; /* 3 sections * 100vw = 300vw. C'est la largeur totale des 3 sections */
-    height: 100vh; /* La hauteur de la section horizontale reste celle de la fenêtre */
-}
-
-/* Chaque section interne doit être configurée comme ceci (déjà fait, mais vérifions) */
-.horizontal-scroll-wrapper > section {
-    width: 100vw;
-    height: 100%; /* S'assurer qu'elles remplissent la hauteur du wrapper (100vh) */
-}
 
 
 

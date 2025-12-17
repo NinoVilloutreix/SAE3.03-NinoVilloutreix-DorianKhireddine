@@ -21,7 +21,7 @@ sections.forEach((section) => {
     trigger: section,
     start: "top center",
     end: "bottom center",
-    markers: true,
+    // markers: true,
     onEnter: () =>
       gsap.to("body", {
         backgroundColor: color,
@@ -155,7 +155,7 @@ const dilatationtl = gsap.timeline({
     trigger: ".section__dilatation",
     start: "top 45%",
     end: "bottom 50%",
-    markers: true,            
+    // markers: true,            
     toggleActions: "play none play reverse"
   },
   yoyo: true
@@ -177,8 +177,8 @@ dilatationtl.fromTo(
 
 dilatationtl.fromTo(
   ".img__warning",
-  { x: -250, y: -300, opacity: 1, scale: 0, rotation: 45 },
-  { x: -200, y: -250, opacity: 1, duration: 1, scale: 1, rotation: 0, ease: "elastic.out"},
+  { x: -250, y: -300, opacity: 1, scale: 0, rotation: 60 },
+  { x: -200, y: -250, opacity: 1, duration: 1, scale: 1, rotation: -15, ease: "elastic.out"},
   "<0.3"
 );
 
@@ -216,7 +216,7 @@ gsap.set(path, {
 
 dilatationtl.to(path, {
   strokeDashoffset: 0,
-  duration: 2
+  duration: 1
 });
 
 
@@ -297,6 +297,7 @@ text2tl.fromTo(
   { x: 0, opacity: 1, duration: 0.5, scale: 1, ease: "back.out" }
 );
 
+
 // ################## GLACIER ##################
 
 const glaciertl = gsap.timeline({
@@ -349,14 +350,219 @@ ourstl.fromTo(
   "<"
 );
 
+// ################## DISTANCE ##################
+
+const distancetl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".section__distance",
+    start: "top 50%",
+    end: "bottom 50%",
+    markers: true,            
+    toggleActions: "play none play reverse"
+  },
+  yoyo: true
+});
+
+distancetl.fromTo(
+  ".img__distance",
+  { y: 200, opacity: 0, scaleX: 5, scaleY: 0 },
+  { y: 0, opacity: 1, duration: 1, scaleX: 3, scaleY: 3, ease: "elastic.out" }
+);
+
+distancetl.fromTo(
+  ".text__distance",
+  { x: 200, opacity: 0, scale: 1 },
+  { x: 100, opacity: 1, duration: 1, scale: 1 },
+  "<"
+);
+
+// ################## RECHERCHE ##################
+
+const iletl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".section__ile",
+    start: "top 50%",
+    end: "bottom 50%",
+    markers: true,            
+    toggleActions: "play none play reverse"
+  },
+  yoyo: true
+});
+
+iletl.fromTo(
+  ".img__ile",
+  { y: 200, opacity: 0, scaleX: 5, scaleY: 0},
+  { y: 0, opacity: 1, duration: 1, scaleX: 3, scaleY: 3, ease: "elastic.out"}
+);
+
+iletl.fromTo(
+  ".text__ile",
+  { x: -200, opacity: 0, scale: 1},
+  { x: -100, opacity: 1, duration: 1, scale: 1},
+  "<"
+);
+
+
+// ################## LOGO ##################
+
+const logotl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".logo",
+    start: "top 50%",
+    end: "bottom 50%",
+    // markers: true,            
+    toggleActions: "play none play reverse"
+  },
+  yoyo: true
+});
+
+logotl
+.fromTo(
+  ".logo",
+  { x: 0, opacity: 0, scale: 0, rotation: 0},
+  { x: 0, opacity: 1, duration: 0.5, scale: 1, ease: "back.out", rotation: 30 })
+  .fromTo(
+  ".logo",
+  {rotation: 30 },
+  {duration: 2, scale: 1, rotation: 0, ease: "elastic.out" },
+  "<"
+  );
+  
+// ################## RECHERCHE ##################
+
+const recherchetl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".section__recherche",
+    start: "top 50%",
+    end: "bottom 50%",
+    markers: true,            
+    toggleActions: "play none play reverse"
+  },
+  yoyo: true
+});
+
+recherchetl.fromTo(
+  ".img__recherche",
+  { y: 200, opacity: 0, scaleX: 5, scaleY: 0, rotation: 45 },
+  { y: 0, opacity: 1, duration: 1, scaleX: 3, scaleY: 3, ease: "elastic.out" , rotation: 0}
+);
+
+recherchetl.fromTo(
+  ".text__recherche",
+  { x: -200, opacity: 0, scale: 1 },
+  { x: -100, opacity: 1, duration: 1, scale: 1 },
+  "<"
+);
+
+
+
+
+// ################## SOLUTIONS ##################
+
+const solutionstl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".section__solutions",
+    start: "top 50%",
+    end: "bottom 50%",
+    markers: true,            
+    toggleActions: "play none play reverse"
+  },
+  yoyo: true
+});
+
+solutionstl.fromTo(
+  ".img__herbier",
+  { x: -500, opacity: 0, scale:5, rotation:-30},
+  { x: 0, opacity: 1, duration: 1, scale:20, ease:"circ.inOut", rotation:30},
+  "<"
+);
+
+solutionstl.fromTo(
+  ".img__coral",
+  { x: 500, opacity: 0, scale:5, rotation:30},
+  { x: 0, opacity: 1, duration: 1, scale:20, ease:"circ.inOut", rotation:-30},
+  "<"
+);
+
+solutionstl.fromTo(
+  ".text__solutions",
+  {scaleX:0, scaleY:2, opacity: 0, scale: 1 },
+  {scaleX:1, scaleY:1,opacity: 1, duration: 1, scale: 1, ease:"circ.inOut"},
+  "<"
+);
+
+solutionstl.add("afterIntro");
+
+
+solutionstl.fromTo(
+  ".img__herbier",
+  { rotation:30},
+  { rotation:0 , ease:"elastic.out", duration: 1},
+  "afterIntro-=0.45"
+);
+
+solutionstl.fromTo(
+  ".img__coral",
+  { rotation:-30},
+  { rotation:0 , ease:"elastic.out", duration: 1},
+  "afterIntro-=0.45"
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ################## BOITE ##################
+
+const lignes = gsap.utils.toArray(".section__boite");
+const total = lignes.length;
+
+lignes.forEach((ligne, i) => {
+  gsap.from(ligne.querySelectorAll("img"), {
+    y: -200,
+    opacity: 0,
+    duration: 0.5,
+    ease: "bounce.out",
+    stagger: 0.1,
+    delay: (total - 1 - i) * 0.5,
+    scrollTrigger: {
+      trigger: ".section__boite",
+      // markers: true,
+      start: "top 30%",
+      end: "bottom 50%",
+      toggleActions: "play none play reverse"
+    }
+  });
+});
+
+
+boitetl.fromTo(
+  ".text__boite",
+  { y: 100, opacity: 0, scale: 1 },
+  { y: 0, opacity: 1, duration: 1, scale: 1 },
+  "<"
+);
+
 // ################## TEXT3 ##################
 
 const text3tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".section__text3",
-    start: "top 40%",
-    end: "bottom 50%",
-    markers: true,            
+    start: "top 60%",
+    end: "bottom 40%",
+    // markers: true,            
     toggleActions: "play none play reverse"
   },
   yoyo: true
@@ -365,64 +571,12 @@ const text3tl = gsap.timeline({
 text3tl.fromTo(
   ".section__text3",
   { y: -100, opacity: 0, scale: 0 },
-  { y: 0, opacity: 1, duration: 1, scale: 1, ease: "bounce.out" }
+  { y: 0, opacity: 1, duration: 1, scale: 1, ease: "bounce.out" },
+  "<0.3"
+  
 );
 
-// ################## 100KM ##################
 
-// const kmtl = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: ".section__km",
-//     start: "top 50%",
-//     end: "bottom 50%",
-//     // markers: true,            
-//     toggleActions: "play none play reverse"
-//   },
-//   yoyo: true
-// });
-
-// kmtl.fromTo(
-//   ".img__km",
-//   { y: 200, opacity: 0, scaleX: 5, scaleY: 0 },
-//   { y: 0, opacity: 1, duration: 1, scaleX: 3, scaleY: 3, ease: "elastic.out" }
-// );
-
-// kmtl.fromTo(
-//   ".text__km",
-//   { y: 100, opacity: 0, scale: 1 },
-//   { y: 0, opacity: 1, duration: 1, scale: 1 },
-//   "<"
-// );
-// ################## BOITE ##################
-
-// const lignes = gsap.utils.toArray(".section__boite");
-// const total = lignes.length;
-
-// lignes.forEach((ligne, i) => {
-//   gsap.from(ligne.querySelectorAll("img"), {
-//     y: -200,
-//     opacity: 0,
-//     duration: 0.5,
-//     ease: "bounce.out",
-//     stagger: 0.1,
-//     delay: (total - 1 - i) * 0.5,
-//     scrollTrigger: {
-//       trigger: ".section__boite",
-//       // markers: true,
-//       start: "top 30%",
-//       end: "bottom 50%",
-//       toggleActions: "play none play reverse"
-//     }
-//   });
-// });
-
-
-// boitetl.fromTo(
-//   ".text__boite",
-//   { y: 100, opacity: 0, scale: 1 },
-//   { y: 0, opacity: 1, duration: 1, scale: 1 },
-//   "<"
-// );
 
 
 
