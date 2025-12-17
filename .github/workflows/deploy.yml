@@ -1,3 +1,4 @@
+# ...existing code...
 name: Deploy site
 
 on:
@@ -15,14 +16,30 @@ jobs:
       - name: Setup Node.js (si nécessaire)
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20.19.0'
 
-      - name: Install dependencies (si package.json présent)
-        run: npm ci
-        continue-on-error: true
+      - name: Debug workspace & tool versions
+        run: |
+          pwd
+          echo "Branch: $(git rev-parse --abbrev-ref HEAD || true)"
+          echo "Files:"
+          ls -la
+          node -v || true
+          npm -v || true
 
-      - name: Build (si script build défini)
-        run: npm run build --if-present
+      - name: Install dependencies (si package.json présent) — échoue si erreur
+        run: |
+          if [ -f package.json ]; then
+            set -euxo pipefail
+            npm ci
+          else
+            echo "No package.json, skipping npm ci"
+          fi
+
+      - name: Build (si script build défini) — échoue si erreur
+        run: |
+          set -euxo pipefail
+          npm run build --if-present
 
       - name: Determine publish directory
         id: publish-dir
@@ -37,3 +54,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ${{ steps.publish-dir.outputs.dir }}
+# ...existing code...
