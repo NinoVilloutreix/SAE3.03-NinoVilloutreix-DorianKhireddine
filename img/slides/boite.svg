@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="New_DA" data-name="New DA" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 108.71 153.05">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Dégradé_sans_nom_548);
+      }
+
+      .cls-2 {
+        fill: #102328;
+      }
+
+      .cls-3 {
+        fill: url(#Dégradé_sans_nom_520);
+      }
+
+      .cls-4 {
+        fill: #840d16;
+      }
+
+      .cls-5 {
+        fill: url(#Dégradé_sans_nom_499);
+      }
+    </style>
+    <linearGradient id="Dégradé_sans_nom_499" data-name="Dégradé sans nom 499" x1="54.36" y1="145.24" x2="54.36" y2="13.23" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#147547"/>
+      <stop offset="1" stop-color="#19955b"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_520" data-name="Dégradé sans nom 520" x1="12.16" y1="82.23" x2="96.55" y2="82.23" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#103496"/>
+      <stop offset="1" stop-color="#1b51e6"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_548" data-name="Dégradé sans nom 548" x1="36.26" y1="101.44" x2="76.73" y2="63.14" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1aca78"/>
+      <stop offset="1" stop-color="#19955b"/>
+    </linearGradient>
+  </defs>
+  <g id="Box">
+    <ellipse class="cls-4" cx="54.36" cy="139.82" rx="54.35" ry="13.23"/>
+    <rect class="cls-4" x="0" y="132.02" width="108.71" height="7.81"/>
+    <ellipse class="cls-4" cx="54.36" cy="132.02" rx="54.35" ry="13.23"/>
+    <path class="cls-5" d="M105.45,13.23v118.16c0,7.66-22.88,13.86-51.1,13.86s-51.09-6.2-51.09-13.86V13.23h102.19Z"/>
+    <circle class="cls-3" cx="54.35" cy="82.23" r="42.19"/>
+    <path class="cls-1" d="M71.06,82.23l12.52,11.84c-4.34,4.58-11.89,4.48-16.86-.23-.43-.41-.83-.83-1.19-1.28-4.37,3.93-11.16,6.44-18.79,6.44-13.18,0-23.87-7.51-23.87-16.77s10.69-16.78,23.87-16.78c7.64,0,14.43,2.52,18.8,6.44.36-.44.75-.87,1.18-1.27,4.97-4.72,12.52-4.82,16.86-.24l-12.52,11.85Z"/>
+    <circle class="cls-2" cx="35.53" cy="82.22" r="3.68"/>
+    <ellipse class="cls-4" cx="54.35" cy="13.23" rx="54.35" ry="13.23"/>
+    <ellipse class="cls-4" cx="54.36" cy="21.03" rx="54.35" ry="13.23"/>
+    <rect class="cls-4" x="0" y="13.23" width="108.71" height="7.81"/>
+  </g>
+</svg>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="New_DA" data-name="New DA" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 975.35 358.81">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Dégradé_sans_nom_386);
+        stroke: #19955b;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        font-family: Baloo-Regular, Baloo;
+        font-size: 68.48px;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #cd2228;
+      }
+
+      .cls-4 {
+        fill: url(#Dégradé_sans_nom_413);
+      }
+
+      .cls-5 {
+        fill: url(#Dégradé_sans_nom_61);
+      }
+    </style>
+    <linearGradient id="Dégradé_sans_nom_413" data-name="Dégradé sans nom 413" x1="735.17" y1="268.68" x2="735.17" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#840d16"/>
+      <stop offset="1" stop-color="#cd2228"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_386" data-name="Dégradé sans nom 386" x1="675.58" y1="336.34" x2="675.58" y2="215.27" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#147547"/>
+      <stop offset="1" stop-color="#19955b"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_61" data-name="Dégradé sans nom 61" x1="0" y1="304.38" x2="528.39" y2="304.38" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1b51e6"/>
+      <stop offset=".22" stop-color="#1b50e3"/>
+      <stop offset="1" stop-color="#103496"/>
+    </linearGradient>
+  </defs>
+  <g id="_100km" data-name="100km">
+    <g>
+      <polygon class="cls-4" points="888.04 201.3 888.04 268.68 843.4 268.68 843.4 260.24 804.84 260.24 804.84 246.63 785.19 246.63 785.19 261.39 712.19 261.39 712.19 242.57 686.92 242.57 686.92 260.24 582.29 260.24 582.29 72.43 646.31 72.43 646.31 166.34 663.15 166.34 663.15 0 732.22 0 732.22 128.87 769.27 128.87 769.27 101.92 830.76 101.92 830.76 213.29 843.4 213.29 843.4 201.3 888.04 201.3"/>
+      <rect class="cls-3" x="615.98" y="199.53" width="40.43" height="53.91"/>
+      <rect class="cls-3" x="776.48" y="184.83" width="40.43" height="46.61"/>
+      <rect class="cls-3" x="661.37" y="181.46" width="60.08" height="53.91"/>
+    </g>
+    <path class="cls-1" d="M429.28,277.28s104.44-20.21,197.65-47.73c93.21-27.51,184.18-9.55,225.73,6.18,41.55,15.72,164.52,89.38,107.25,93.21-57.27,3.83-583.6,7.39-583.6,7.39,0,0,1.35-40.68,52.97-59.05Z"/>
+    <path class="cls-5" d="M20.78,278.42s30.6.28,102.53-13.69c89.39-17.36,141.18,0,141.18,0,0,0,42.76,33.26,109.96,0,67.2-33.26,118.1,0,118.1,0,0,0,3.39,5.66,16.06,9.28,12.67,3.62,28.06,12.67,14.48,17.2s-66.97,18.1-67.88,31.68c-.91,13.58,36.2,2.72,38.92,14.48s-1.81,19.01-54.3,20.82-316.75-.91-349.33,0c-32.58.91-26.25-21.72-26.25-21.72,0,0,4.53-11.77,27.15-11.77s18.1-21.97-2.72-21.97S-.62,317.57,0,291.33c.28-11.79,10.95-13.48,20.78-12.91Z"/>
+    <rect class="cls-3" x="694.74" y="199.53" width="40.43" height="53.91"/>
+    <rect class="cls-3" x="760.2" y="153.39" width="40.43" height="77.49"/>
+    <rect class="cls-3" x="746.16" y="208.13" width="40.43" height="22.74"/>
+    <rect class="cls-3" x="825.66" y="226.24" width="40.43" height="22.74"/>
+    <rect class="cls-3" x="643.31" y="208.13" width="30.04" height="23.3"/>
+    <text class="cls-2" transform="translate(301.42 153.39)"><tspan x="0" y="0">100km</tspan></text>
+  </g>
+</svg>
