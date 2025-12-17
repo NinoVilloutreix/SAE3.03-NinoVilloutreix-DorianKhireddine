@@ -354,9 +354,9 @@ ourstl.fromTo(
 const text3tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".section__text3",
-    start: "top 50%",
+    start: "top 40%",
     end: "bottom 50%",
-    // markers: true,            
+    markers: true,            
     toggleActions: "play none play reverse"
   },
   yoyo: true
