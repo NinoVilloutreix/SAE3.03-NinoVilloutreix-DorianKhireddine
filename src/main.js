@@ -257,8 +257,8 @@ acidetl.fromTo(
 const monteetl = gsap.timeline({
   scrollTrigger: {
     trigger: ".section__montee",
-    start: "top 50%",
-    end: "bottom 50%",
+    start: "top 60%",
+    end: "bottom 40%",
     // markers: true,            
     toggleActions: "play none play reverse"
   },
@@ -509,7 +509,34 @@ solutionstl.fromTo(
 );
 
 
+// ################## EFFERALGAN ##################
 
+const panneautl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".section__panneau",
+    start: "top 50%",
+    end: "bottom 50%",
+    // markers: true,            
+    toggleActions: "play none play reverse",
+    scrub: true
+  },
+  yoyo: true
+});
+
+
+panneautl.fromTo(".img__panneau",
+  { y: -1000, opacity: 0, scale: 1 },
+  { y: -200, opacity: 1, scale: 3, ease: "circ.out" }
+);
+
+
+
+panneautl.to(".img__panneau", {
+  y: 50,
+  opacity: 0,
+  scale: 1,
+  ease: "circ.in",
+});
 
 
 
