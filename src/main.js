@@ -79,7 +79,7 @@ const regultl = gsap.timeline({
 
 regultl.fromTo(
   ".img__regul",
-  { y: 100, opacity: 0, scale: 10 },
+  { y: 100, opacity: 1, scale: 10 },
   { y: 0, opacity: 1, duration: 1, scale: 10 }
 );
 
@@ -509,14 +509,14 @@ solutionstl.fromTo(
 );
 
 
-// ################## EFFERALGAN ##################
+// ################## PANNEAU ##################
 
 const panneautl = gsap.timeline({
   scrollTrigger: {
     trigger: ".section__panneau",
     start: "top 50%",
-    end: "bottom 50%",
-    // markers: true,            
+    end: "bottom",
+    markers: true,            
     toggleActions: "play none play reverse",
     scrub: true
   },
@@ -525,17 +525,18 @@ const panneautl = gsap.timeline({
 
 
 panneautl.fromTo(".img__panneau",
-  { y: -1000, opacity: 0, scale: 1 },
-  { y: -200, opacity: 1, scale: 3, ease: "circ.out" }
+  { y: 1000, opacity: 0, scale: 1, rotation: 0},
+  { y: 200, opacity: 1, scale: 3, ease: "circ.out", rotation: 390 }
 );
 
 
 
 panneautl.to(".img__panneau", {
-  y: 50,
+  y: -500,
   opacity: 0,
   scale: 1,
   ease: "circ.in",
+  rotation: 720
 });
 
 

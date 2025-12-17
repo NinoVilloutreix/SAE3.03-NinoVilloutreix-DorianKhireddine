@@ -34,6 +34,7 @@ body {
     --color-blue2: var(--clr-blue2);
     --color-blue3: var(--clr-blue3);
 
+    --color-red-dark: var(--clr-red-dark);
     --color-red1: var(--clr-red1);
     --color-red2: var(--clr-red2);
     --color-red3: var(--clr-red3);
@@ -61,6 +62,7 @@ body {
         --clr-blue2: oklch(0.5061 0.2314 264.13);
         --clr-blue3: oklch(0.6315 0.1624 248.37);
 
+        --clr-red-dark: oklch(0.305 0.1126 21.82);
         --clr-red1: oklch(0.5474 0.2039 26);
         --clr-red2: oklch(0.5909 0.2047 24.54);
         --clr-red3: oklch(0.6324 0.161 21.05);
