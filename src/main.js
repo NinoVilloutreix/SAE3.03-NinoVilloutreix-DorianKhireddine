@@ -570,7 +570,6 @@ text3tl.fromTo(
 
 
 
-
 // ################## BOITE ##################
 
 const lignes = gsap.utils.toArray(".section__boite");
