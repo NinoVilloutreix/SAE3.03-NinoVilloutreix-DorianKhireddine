@@ -19,8 +19,8 @@ sections.forEach((section) => {
   
   ScrollTrigger.create({
     trigger: section,
-    start: "top center",
-    end: "bottom center",
+    start: "top 50%",
+    end: "bottom 50%",
     // markers: true,
     onEnter: () =>
       gsap.to("body", {
@@ -43,8 +43,8 @@ sections.forEach((section) => {
 const planettl = gsap.timeline({
   scrollTrigger: {
     trigger: ".section__planet",
-    start: "top 50%",
-    end: "bottom 50%",
+    start: "top 70%",
+    end: "bottom 30%",
     // markers: true,            
     toggleActions: "play none play reverse"
   },
@@ -79,8 +79,8 @@ const regultl = gsap.timeline({
 
 regultl.fromTo(
   ".img__regul",
-  { y: 100, opacity: 1, scale: 10 },
-  { y: 0, opacity: 1, duration: 1, scale: 10 }
+  { y: 0, opacity: 1, scale: 10 },
+  { y: -200, opacity: 1, duration: 1, scale: 10 }
 );
 
 regultl.fromTo(
@@ -134,8 +134,8 @@ efferalgantl.to(".img__efferalgan", {
 const text1tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".section__text1",
-    start: "top 40%",
-    end: "bottom 60%",
+    start: "top 50%",
+    end: "bottom 50%",
     // markers: true,            
     toggleActions: "play none play reverse"
   },
@@ -144,7 +144,7 @@ const text1tl = gsap.timeline({
 
 text1tl.fromTo(
   ".section__text1",
-  { x: -100, opacity: 0, scale: 1 },
+  { x: -300, opacity: 0, scale: 1 },
   { x: 0, opacity: 1, duration: 1, scale: 1, ease: "elastic.out" }
 );
 
@@ -153,8 +153,8 @@ text1tl.fromTo(
 const dilatationtl = gsap.timeline({
   scrollTrigger: {
     trigger: ".section__dilatation",
-    start: "top 60%",
-    end: "bottom 40%",
+    start: "top 80%",
+    end: "bottom 20%",
     // markers: true,            
     toggleActions: "play none play reverse"
   },
@@ -177,22 +177,22 @@ dilatationtl.fromTo(
 
 dilatationtl.fromTo(
   ".img__warning",
-  { x: -50, y: -300, opacity: 1, scale: 0, rotation: 60 },
-  { x: 0, y: -250, opacity: 1, duration: 1, scale: 5, rotation: -15, ease: "elastic.out"},
+  { x: -50, y: -400, opacity: 1, scale: 0, rotation: 60 },
+  { x: 0, y: -350, opacity: 1, duration: 1, scale: 2, rotation: -15, ease: "elastic.out"},
   "<0.3"
 );
 
 dilatationtl.fromTo(
   ".img__arrow1",
-  { x: -250, y: -300, opacity: 0, scaleX: -0.5, scaleY: 0.5, rotation: 0 },
-  { x: 0, y: -200, opacity: 1, duration: 0.5, scaleX: -1, scaleY: 1, rotation: -45, ease: "back.out"},
+  { x: 50, y: -300, opacity: 0, scaleX: -0.5, scaleY: 0.5, rotation: 0 },
+  { x: 300, y: -200, opacity: 1, duration: 0.5, scaleX: -1, scaleY: 1, rotation: -45, ease: "back.out"},
   "<0.3"
 );
 
 dilatationtl.fromTo(
   ".img__arrow2",
-  { x: -600, y: 100, opacity: 0, scale: 0.5, rotation: 0 },
-  { x: -500, y: 200, opacity: 1, duration: 0.5, scale: 1.5, rotation: -60, ease: "back.out"},
+  { x: -200, y: 100, opacity: 0, scale: 0.5, rotation: 0 },
+  { x: -100, y: 200, opacity: 1, duration: 0.5, scale: 1.5, rotation: -60, ease: "back.out"},
   "<0.3"
 );
 
@@ -283,8 +283,8 @@ monteetl.fromTo(
 const text2tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".section__text2",
-    start: "top 60%",
-    end: "bottom 40%",
+    start: "top 70%",
+    end: "bottom 30%",
     // markers: true,            
     toggleActions: "play none play reverse"
   },
@@ -408,8 +408,8 @@ iletl.fromTo(
 const logotl = gsap.timeline({
   scrollTrigger: {
     trigger: ".logo",
-    start: "top 50%",
-    end: "bottom 50%",
+    start: "top 60%",
+    end: "bottom 40%",
     // markers: true,            
     toggleActions: "play none play reverse"
   },
@@ -545,7 +545,26 @@ panneautl.to(".img__panneau", {
 
 
 
+// ################## TEXT3 ##################
 
+const text3tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".section__text3",
+    start: "top 70%",
+    end: "bottom 30%",
+    markers: true,            
+    toggleActions: "play none play reverse"
+  },
+  yoyo: true
+});
+
+text3tl.fromTo(
+  ".section__text3",
+  { y: -100, opacity: 0, scale: 0 },
+  { y: 0, opacity: 1, duration: 1, scale: 1, ease: "bounce.out" },
+  "<0.3"
+  
+);
 
 
 
@@ -568,7 +587,7 @@ lignes.forEach((ligne, i) => {
     scrollTrigger: {
       trigger: ".section__boite",
       // markers: true,
-      start: "top 30%",
+      start: "top 80%",
       end: "bottom 50%",
       toggleActions: "play none play reverse"
     }
@@ -583,26 +602,7 @@ boitetl.fromTo(
   "<"
 );
 
-// ################## TEXT3 ##################
 
-const text3tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".section__text3",
-    start: "top 60%",
-    end: "bottom 40%",
-    // markers: true,            
-    toggleActions: "play none play reverse"
-  },
-  yoyo: true
-});
-
-text3tl.fromTo(
-  ".section__text3",
-  { y: -100, opacity: 0, scale: 0 },
-  { y: 0, opacity: 1, duration: 1, scale: 1, ease: "bounce.out" },
-  "<0.3"
-  
-);
 
 
 
