@@ -25,11 +25,14 @@
     </section>
 
     <!-- //////////////////////////// GRANDSECTION 1 //////////////////////////// -->
-    <section class="grandsection grandsection__1 flex justify-center flex-col gap-10" data-bgcolor="oklch(0.3731 0.1653 264.17)">
+    <section class="grandsection grandsection__1 flex justify-center flex-col gap-10"
+      data-bgcolor="oklch(0.3731 0.1653 264.17)">
       <h2 class="text-center text-6xl text-gray1 font-baloo px-75">L'importance de l'eau</h2>
 
+
+      <!--   sm: 640px, md: 768px, lg: 1024px, xl: 1280px, 2xl: 1536px  -->
       <!-- ########### Section Horizontale R ########## -->
-      <section class="section__planet flex justify-center items-center flex-row gap-50 px-100 h-100 mb-40">
+      <section class="section__planet flex justify-center items-center flex-row sm:text-sm  md:text-lg lg:text-lg xl:text-2xl 2xl:text-2xl      sm:gap-10 md:gap-20 lg:gap-30 xl:gap-40 2xl:gap-50      sm:px-5 md:px-10 lg:px-20 xl:px-40 2xl:px-75 h-100 mb-40">
         <h4 class="text__planet text-2xl text-gray1 font-rubik text-left">L’eau recouvre 70% des zones habitables sur
           Terre. L’océan est de
           ce fait <strong class="text-3xl text-red1 font-rubik text-left">la plus grande réserve de biodiversité du
@@ -139,7 +142,8 @@
       </section>
     </section>
     <!-- //////////////////////////// GRANDSECTION 2 //////////////////////////// -->
-    <section class="grandsection grandsection__2 flex justify-center flex-col gap-10" data-bgcolor="oklch(0.4977 0.1125 156.45)">
+    <section class="grandsection grandsection__2 flex justify-center flex-col gap-10"
+      data-bgcolor="oklch(0.4977 0.1125 156.45)">
       <h2 class="section__text1 text-center text-6xl text-gray1 font-baloo px-75 py-50 mb-50 z-10">Cependant, à force
         d’emmagasiner
         de la
@@ -148,11 +152,12 @@
           eaux.</strong></h2>
 
       <!-- ########### Section Verticale ########## -->
-      <section class="section__dilatation relative flex border-4 border-red500 justify-center items-center flex-row gap-50 px-100 h-100 mb-50">
+      <section
+        class="section__dilatation relative flex justify-center items-center flex-row gap-50 px-100 h-100 mb-50">
         <img alt="dilatation" src="/img/slides/dilatation.svg" class="img__dilatation h-30">
         <!-- Warning -->
-        <svg class="img__warning warning h-30" id="New_DA" data-name="New DA"
-          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 129.41 147.55">
+        <svg class="img__warning warning h-30" id="New_DA" data-name="New DA" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 129.41 147.55">
           <defs>
             <style>
               .warning {
@@ -203,7 +208,7 @@
                     stroke: #dd343a;
                     stroke-linecap: butt;
                     stroke-linejoin: round;
-                    stroke-width: 5px;
+                    stroke-width: 15px;
                   }
                 }
               </style>
@@ -217,7 +222,8 @@
           </svg>
         </div>
 
-        <h3=4 class="text__dilatation text-2xl text-gray1 font-rubik text-left z-50">La montée des eaux est principalement
+        <h3=4 class="text__dilatation text-2xl text-gray1 font-rubik text-left z-50">La montée des eaux est
+          principalement
           causée par le réchauffement des océans, qui se dilatent avec la chaleur. Un dérèglement des courants marins
           est engendré, et moins d’oxygène et de nutriments apportés aux espèces marines.</h4>
       </section>
@@ -503,7 +509,8 @@
       <img alt="logo" src="/img/logo.svg" class="logo h-50">
       <!-- ########### Section Horizontale L ########## -->
       <section class="section__recherche flex justify-center items-center flex-row gap-50 px-100 h-100 mb-40">
-        <h4 class="text__recherche text-2xl text-gray1 font-rubik text-left">Depuis 30 ans, le CNES travaille avec la NASA pour observer l’évolution des océans depuis l’espace.</h4>
+        <h4 class="text__recherche text-2xl text-gray1 font-rubik text-left">Depuis 30 ans, le CNES travaille avec la
+          NASA pour observer l’évolution des océans depuis l’espace.</h4>
         <img alt="recherche" src="/img/slides/recherche.svg" class="img__recherche h-30">
       </section>
 
@@ -539,37 +546,42 @@
       <section class="section__waterfall flex justify-start items-center flex-col gap-0 px-100 h-100 mt-0">
         <h3 class="text__waterfall text-center text-4xl text-gray1 font-baloo z-20">Pour en savoir plus...</h3>
         <div
-          class="grid border-4 border-red-700 w-screen grid-cols-3 items-center px-50 py-25 bg-red-dark justify-items-center">
-          <div class="flex flex-col items-end gap-50 justify-center text-center text-2xl text-gray1">
-            <figure class="flex flex-col items-end gap-10">
+          class="grid grid-cols-3 w-screen items-center px-10 py-10 bg-red-900 justify-items-center divide-x divide-red-700">
+          <div
+            class="flex flex-col items-end gap-10 justify-center text-center text-2xl text-gray-100 divide-y divide-red-700">
+            <figure class="flex flex-col items-end gap-2 py-2">
               <img class="h-30" src="/img/slides/panneau.svg">
               <figcaption>Association name</figcaption>
             </figure>
-            <figure class="flex flex-col items-end gap-10">
+            <figure class="flex flex-col items-end gap-2 py-2">
               <img class="h-30" src="/img/slides/panneau.svg">
               <figcaption>Association name</figcaption>
             </figure>
-            <figure class="flex flex-col items-end gap-10">
+            <figure class="flex flex-col items-end gap-2 py-2">
               <img class="h-30" src="/img/slides/panneau.svg">
               <figcaption>Association name</figcaption>
             </figure>
           </div>
-          <p>Waterfall</p>
-          <div class="flex flex-col items-start gap-50 justify-center text-center text-2xl text-gray1">
-            <figure class="flex flex-col items-start gap-10">
+
+          <p class="text-center">Waterfall</p>
+
+          <div
+            class="flex flex-col items-start gap-10 justify-center text-center text-2xl text-gray-100 divide-y divide-red-700">
+            <figure class="flex flex-col items-start gap-2 py-2">
               <img class="h-30" src="/img/slides/panneau.svg">
               <figcaption>Association name</figcaption>
             </figure>
-            <figure class="flex flex-col items-start gap-10">
+            <figure class="flex flex-col items-start gap-2 py-2">
               <img class="h-30" src="/img/slides/panneau.svg">
               <figcaption>Association name</figcaption>
             </figure>
-            <figure class="flex flex-col items-start gap-10">
+            <figure class="flex flex-col items-start gap-2 py-2">
               <img class="h-30" src="/img/slides/panneau.svg">
               <figcaption>Association name</figcaption>
             </figure>
           </div>
         </div>
+
       </section>
     </section>
   </main>
