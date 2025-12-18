@@ -4,30 +4,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <lang>fr</lang>
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
     rel="stylesheet">
   <!-- Fonts -->
+
+  <meta name="description"
+    content="Ce site fut réalisé lors du projet étudiant de la SAÉ 3.03 par Dorian Khireddine et Nino Villoutreix. L'image de la marqué QQF est utilisée à but universitaire et ce site n'est en aucun cas concurrentiel à la marque originale." />
   <title>Qu'est-ce Qu'on Fait - Quand la Terre Prend l'Eau</title>
 </head>
 
 <body class="section__body bg-dark">
-  <header class="flex justify-center py-4 bg-green1 text-gray1">
-    <h1 class="text-3xl font-bold">Nom du site</h1>
-  </header>
   <main class="flex flex-col justify-center pt-70 gap-50 ">
-    <section class="grandsection grandsection__0 flex justify-center items-center flex-col gap-20 mb-50"
+    <section class="grandsection grandsection__0 flex justify-center items-center flex-col gap-20 mb-20"
       data-bgcolor="oklch(0.2424 0.0266 216.66)">
       <img alt="logo" src="/img/logo.svg" class="h-50">
-      <h3 class="text-center text-4xl text-gray1 font-baloo">Par Nino Villoutreix & Dorian Khireddine</h3>
+      <div class="flex flex-col gap-10">
+        <h1 class="text-center text-6xl text-gray1 font-baloo px-75">Quand la Terre prend l'eau</h1>
+        <h2 class="text-center text-4xl text-gray1 font-baloo">Par Nino Villoutreix & Dorian Khireddine</h2>
+      </div>
+
     </section>
 
     <!-- //////////////////////////// GRANDSECTION 1 //////////////////////////// -->
     <section class="grandsection grandsection__1 flex justify-center flex-col gap-10"
       data-bgcolor="oklch(0.3731 0.1653 264.17)">
-      <h2 class="text-center text-6xl text-gray1 font-baloo px-75">L'importance de l'eau</h2>
+      <h3 class="text-center text-6xl text-gray1 font-baloo px-75">L'importance de l'eau</h3>
 
 
       <!--   sm: 640px, md: 768px, lg: 1024px, xl: 1280px, 2xl: 1536px  -->
@@ -38,8 +43,8 @@
           Terre. L’océan est de
           ce fait <strong class="text-red1 font-rubik text-left">la plus grande réserve de biodiversité du
             monde</strong>.</h4>
-        <svg class="img__planet planet h-30" id="New_DA" data-name="New DA" xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 304.79 304.79">
+        <svg alt="Planet" class="img__planet planet h-30" id="New_DA" data-name="New DA"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 304.79 304.79">
           <defs>
             <style>
               .planet {
@@ -146,19 +151,19 @@
     <!-- //////////////////////////// GRANDSECTION 2 //////////////////////////// -->
     <section class="grandsection grandsection__2 flex justify-center flex-col gap-10 mt-50"
       data-bgcolor="oklch(0.4977 0.1125 156.45)">
-      <h2
+      <h3
         class="section__text1 text-center text-gray1 font-baloo text-2xl sm:text-3xl  md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl  sm:px-0 md:px-5 lg:px-10 xl:px-40 2xl:px-75 h-100 mb-40 z-10">
         Cependant, à force
         d’emmagasiner
         de la
         chaleur,
         l’océan se réchauffe : ainsi est engendrée <strong class="text-green3 font-rubik text-left">la montée des
-          eaux.</strong></h2>
+          eaux.</strong></h3>
 
       <!-- ########### Section Verticale ########## -->
       <section
         class="section__dilatation relative flex justify-center items-center flex-row       sm:text-sm  md:text-lg lg:text-lg xl:text-2xl 2xl:text-2xl      sm:gap-10 md:gap-10 lg:gap-10 xl:gap-10 2xl:gap-10      sm:px-5 md:px-10 lg:px-20 xl:px-40 2xl:px-75 h-100 mb-50">
-        <img alt="dilatation" src="/img/slides/dilatation.svg" class="img__dilatation h-30">
+        <img alt="Dilatation" src="/img/slides/dilatation.svg" class="img__dilatation h-30">
         <!-- Warning -->
         <svg class="img__warning warning h-30" id="New_DA" data-name="New DA" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 129.41 147.55">
@@ -199,7 +204,7 @@
         <img alt="arrow" src="/img/slides/arrow.svg" class="img__arrow1 h-30">
         <img alt="arrow" src="/img/slides/arrow.svg" class="img__arrow2 h-30">
         <!-- Liseré -->
-        <div class="img__lisere-container absolute w-full h-full z-0">
+        <div alt="Lisere" class="img__lisere-container absolute w-full h-full z-0">
           <svg id="New_DA" class="lisere z-100 w-full h-full" data-name="New DA" xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 884.68 769.46">
             <defs>
@@ -245,8 +250,8 @@
       <!-- ########### Section Horizontale L ########## -->
       <section
         class="section__montee flex justify-center items-center flex-row sm:text-sm px-5  md:text-lg lg:text-lg xl:text-2xl 2xl:text-2xl      sm:gap-10 md:gap-20 lg:gap-30 xl:gap-40 2xl:gap-50      sm:px-5 md:px-10 lg:px-20 xl:px-40 2xl:px-75 h-100 mb-40 ">
-        <svg id="New_DA" class="montee img__montee h-30" data-name="New DA" xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 664.25 452.59">
+        <svg alt="montee" id="New_DA" class="montee img__montee h-30" data-name="New DA"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 664.25 452.59">
           <defs>
             <style>
               .montee {
@@ -353,17 +358,17 @@
             </text>
           </g>
         </svg>
-        <h4 class="text__montee text-gray1 font-rubik text-left">Depuis un siècle, l’océan est monté de <strong
+        <p class="text__montee text-gray1 font-rubik text-left">Depuis un siècle, l’océan est monté de <strong
             class="text-green3 font-rubik text-left">15 cm</strong>. D’après un rapport de 2023 du GIEC, avec
-          l’accroissement de l’industrie humaine, ce phénomène est de plus en plus rapide.</h4>
+          l’accroissement de l’industrie humaine, ce phénomène est de plus en plus rapide.</p>
       </section>
-      <h2
+      <h3
         class="section__text2 text-center text-gray1 font-baloo text-2xl sm:text-3xl  md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl  sm:px-0 md:px-5 lg:px-10 xl:px-40 2xl:px-75 h-100 mb-40 z-2">
         Mais la montée des eaux n’est
         pas
         uniquement
         due au réchauffement global : elle dépend aussi de <strong class="text-green3 font-rubik text-left">deux autres
-          facteurs</strong>...</h2>
+          facteurs</strong>...</h3>
       <!--   sm: 640px, md: 768px, lg: 1024px, xl: 1280px, 2xl: 1536px  -->
       <!-- ########### Section DOUBLE ########## -->
       <section
@@ -371,17 +376,17 @@
         <div
           class="section__glacier flex flex-row sm:text-sm  md:text-lg lg:text-lg xl:text-2xl 2xl:text-2xl      sm:gap-40 md:gap-40 lg:gap-50 xl:gap-50 5xl:gap-55 2xl:gap-60">
           <img alt="glacier" src="/img/slides/glacier.svg" class="img__glacier h-30">
-          <h4 class="text__glacier text-gray1 font-rubik text-left">La fonte des glaces est une conséquence
+          <p class="text__glacier text-gray1 font-rubik text-left">La fonte des glaces est une conséquence
             directe du réchauffement climatique, et devient de ce fait une cause majeure de l’augmentation du niveau des
-            océans, représentant <strong class="text-green3 font-rubik text-left">2,2mm/an</strong>.</h4>
+            océans, représentant <strong class="text-green3 font-rubik text-left">2,2mm/an</strong>.</p>
         </div>
         <div
           class="section__ours flex flex-row sm:text-sm  md:text-lg lg:text-lg xl:text-2xl 2xl:text-2xl      sm:gap-40 md:gap-40 lg:gap-50 xl:gap-50 5xl:gap-55 2xl:gap-60  ">
-          <h4 class="text__ours text-gray1 font-rubik text-right">La fonte des calottes glacières en Arctique
+          <p class="text__ours text-gray1 font-rubik text-right">La fonte des calottes glacières en Arctique
             et
             en Antarctique est elle-aussi une cause de la montée des eaux; c’est même une des <strong
               class="text-green3 font-rubik text-left">plus importantes à ce jour</strong>, selon le dernier rapport du
-            GIEC. </h4>
+            GIEC. </p>
           <img alt="ours" src="/img/slides/ours.svg" class="img__ours h-30">
         </div>
       </section>
@@ -389,9 +394,9 @@
 
     <!-- //////////////////////////// GRANDSECTION 3 //////////////////////////// -->
     <section class="grandsection grandsection__3 flex flex-col gap-50 mt-100" data-bgcolor="oklch(0.305 0.1126 21.82)">
-      <h2
+      <h3
         class="section__text3 text-center text-gray1 font-baloo text-3xl sm:text-4xl  md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl  sm:px-0 md:px-5 lg:px-10 xl:px-40 2xl:px-75 h-100 z-10">
-        Pourquoi c'est grave?</h2>
+        Pourquoi c'est grave?</h3>
       <!-- ########### Section Verticale ########## -->
       <section
         class="item section__boite flex justify-center items-center flex-col     sm:text-sm px-5  md:text-lg lg:text-lg xl:text-2xl 2xl:text-2xl      sm:gap-10 md:gap-20 lg:gap-30 xl:gap-40 2xl:gap-50      sm:px-5 md:px-10 lg:px-20 xl:px-40 2xl:px-75 h-100 mb-40">
@@ -423,16 +428,16 @@
             <img alt="boite" src="/img/slides/boite.svg" class="h-30">
           </div>
         </div>
-        <h4 class="text__boite text-2xl text-gray1 font-rubik text-center"><strong
+        <p class="text__boite text-2xl text-gray1 font-rubik text-center"><strong
             class="text-red1 font-rubik text-left">3 milliards d'humains</strong> dépendent des ressources marines
           pour
           se nourrir. L'écosystème marin est essentiel à la survie de notre espèce, et il est lentement en train de
-          dépérir par notre faute.</h4>
+          dépérir par notre faute.</p>
       </section>
       <!-- ########### Section Horizontale L ########## -->
       <section
         class="distance section__distance flex justify-center items-center flex-row px-5  sm:text-sm  md:text-lg lg:text-lg xl:text-2xl 2xl:text-2xl      sm:gap-10 md:gap-20 lg:gap-30 xl:gap-40 2xl:gap-50      sm:px-5 md:px-10 lg:px-20 xl:px-40 2xl:px-75 h-100 mb-40">
-        <svg id="New_DA" class="img__distance h-30" data-name="New DA" xmlns="http://www.w3.org/2000/svg"
+        <svg alt="100km" id="New_DA" class="img__distance h-30" data-name="New DA" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 975.35 358.81">
           <defs>
             <style>
@@ -503,19 +508,19 @@
           </g>
         </svg>
 
-        <h4 class="text__distance text-gray1 font-rubik text-left"><strong
+        <p class="text__distance text-gray1 font-rubik text-left"><strong
             class="text-3xl text-red1 font-rubik text-left">30% de la population mondiale</strong> vit à moins de
           <strong class="text-red1 font-rubik text-left">100km</strong> des côtes et 680 millions vivent à
           moins de 10m de la mer.
           En 30 ans, la population du littoral a augmenté de 12%...
-        </h4>
+        </p>
       </section>
       <!-- ########### Section Horizontale L ########## -->
       <section
         class="section__ile flex justify-center items-center flex-row px-5  sm:text-sm  md:text-lg lg:text-lg xl:text-2xl 2xl:text-2xl      sm:gap-10 md:gap-20 lg:gap-30 xl:gap-40 2xl:gap-50      sm:px-5 md:px-10 lg:px-20 xl:px-40 2xl:px-75 h-100 mb-40">
-        <h4 class="text__ile text-gray1 font-rubik text-left">Des îles très basses comme les Maldives
+        <p class="text__ile text-gray1 font-rubik text-left">Des îles très basses comme les Maldives
           pourraient être totalement <strong class="text-red1 font-rubik text-left">englouties</strong> par
-          la montée des océans.</h4>
+          la montée des océans.</p>
         <img alt="ile" src="/img/slides/ile.svg" class="img__ile h-30">
       </section>
     </section>
@@ -526,8 +531,8 @@
       <!-- ########### Section Horizontale L ########## -->
       <section
         class="section__recherche flex justify-center items-center flex-row sm:text-sm px-5  md:text-lg lg:text-lg xl:text-2xl 2xl:text-2xl      sm:gap-10 md:gap-20 lg:gap-30 xl:gap-40 2xl:gap-50      sm:px-5 md:px-10 lg:px-20 xl:px-40 2xl:px-75 h-100 mb-40">
-        <h4 class="text__recherche text-gray1 font-rubik text-left">Depuis 30 ans, le CNES travaille avec la
-          NASA pour observer l’évolution des océans depuis l’espace.</h4>
+        <p class="text__recherche text-gray1 font-rubik text-left">Depuis 30 ans, le CNES travaille avec la
+          NASA pour observer l’évolution des océans depuis l’espace.</p>
         <img alt="recherche" src="/img/slides/recherche.svg" class="img__recherche h-30 z-1">
       </section>
 
@@ -537,9 +542,9 @@
         <div class="flex items-start">
           <img alt="corail" src="/img/slides/coral.svg" class="img__coral h-30">
         </div>
-        <h2 class="text__solutions text-center text-6xl text-gray1 font-baloo z-2">Les solutions sont souvent d'origine
+        <h3 class="text__solutions text-center text-6xl text-gray1 font-baloo z-2">Les solutions sont souvent d'origine
           naturelle, à condition qu'on les préserve...
-        </h2>
+        </h3>
         <div class="flex items-end">
           <img alt="herbier" src="/img/slides/herbier_de_posidonie.svg" class="img__herbier h-30 z-1">
         </div>
@@ -551,11 +556,11 @@
       <!-- ########### Section Horizontale L ########## -->
       <section
         class="section__regul flex justify-center items-center flex-col px-5  text-2xl sm:text-3xl  md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl  sm:px-0 md:px-5 lg:px-10 xl:px-40 2xl:px-75 h-100 mb-40">
-        <img alt="Régulateur" src="/img/slides/WATER2.svg" class="img__regul h-30">
-        <h4 class="text__regul text-center text-gray1 font-baloo py-50 z-2">Depuis 1986, la loi Littoral
+        <img alt="MER" src="/img/slides/WATER2.svg" class="img__regul h-30">
+        <h3 class="text__regul text-center text-gray1 font-baloo h3y-50 z-2">Depuis 1986, la loi Littoral
           interdit en France de construire à <strong class="text-red1 font-rubik text-left">moins de 100 m de la
             mer</strong>.
-        </h4>
+        </p>
       </section>
 
 
@@ -569,11 +574,11 @@
           <div
             class="flex flex-col items-end gap-10 justify-center text-center text-2xl text-gray-100 divide-y divide-red-700">
             <figure class="flex flex-col items-end gap-2 py-2">
-              <img class="h-30" src="/img/oce.png">
+              <img alt="OCE" class="h-30" src="/img/oce.png">
               <figcaption>Coopération et sensibilisation</figcaption>
             </figure>
             <figure class="flex flex-col items-end gap-2 py-2">
-              <img class="h-30" src="/img/SFE.png">
+              <img alt="SFE" class="h-30" src="/img/SFE.png">
               <figcaption>Défendons notre planète</figcaption>
             </figure>
           </div>
@@ -582,11 +587,11 @@
           <div
             class="flex flex-col items-start gap-10 justify-center text-center text-2xl text-gray-100 divide-y divide-red-700">
             <figure class="flex flex-col items-start gap-2 py-2">
-              <img class="h-30" src="/img/oceana.png">
+              <img alt="OCEANA" class="h-30" src="/img/oceana.png">
               <figcaption>Pour une politique verte</figcaption>
             </figure>
             <figure class="flex flex-col items-start gap-2 py-2">
-              <img class="h-30" src="/img/tara_ocean.png">
+              <img alt="TARA OCEAN" class="h-30" src="/img/tara_ocean.png">
               <figcaption>Nos aventuriers pour le climat</figcaption>
             </figure>
           </div>
