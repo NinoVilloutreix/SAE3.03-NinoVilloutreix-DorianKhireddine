@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Man" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 433.75 607.91">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke-width: 70px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #1d1d1b;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        stroke-width: 100px;
+      }
+
+      .cls-3 {
+        fill: #1d1d1b;
+      }
+    </style>
+  </defs>
+  <circle class="cls-3" cx="216.88" cy="103.03" r="103.03"/>
+  <line class="cls-2" x1="216.88" y1="117.28" x2="216.88" y2="403.51"/>
+  <line class="cls-1" x1="216.88" y1="206.06" x2="398.75" y2="291.75"/>
+  <line class="cls-1" x1="216.88" y1="403.51" x2="386.28" y2="572.91"/>
+  <line class="cls-1" x1="216.88" y1="206.06" x2="35" y2="291.75"/>
+  <line class="cls-1" x1="219.53" y1="400.86" x2="50.12" y2="570.26"/>
+</svg>
