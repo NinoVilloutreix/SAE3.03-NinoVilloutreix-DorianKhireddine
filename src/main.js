@@ -357,7 +357,7 @@ const distancetl = gsap.timeline({
     trigger: ".section__distance",
     start: "top 50%",
     end: "bottom 50%",
-    markers: true,            
+    // markers: true,            
     toggleActions: "play none play reverse"
   },
   yoyo: true
@@ -383,7 +383,7 @@ const iletl = gsap.timeline({
     trigger: ".section__ile",
     start: "top 50%",
     end: "bottom 50%",
-    markers: true,            
+    // markers: true,            
     toggleActions: "play none play reverse"
   },
   yoyo: true
@@ -435,7 +435,7 @@ const recherchetl = gsap.timeline({
     trigger: ".section__recherche",
     start: "top 50%",
     end: "bottom 50%",
-    markers: true,            
+    // markers: true,            
     toggleActions: "play none play reverse"
   },
   yoyo: true
@@ -464,7 +464,7 @@ const solutionstl = gsap.timeline({
     trigger: ".section__solutions",
     start: "top 50%",
     end: "bottom 50%",
-    markers: true,            
+    // markers: true,            
     toggleActions: "play none play reverse"
   },
   yoyo: true
@@ -516,7 +516,7 @@ const panneautl = gsap.timeline({
     trigger: ".section__panneau",
     start: "top 50%",
     end: "bottom",
-    markers: true,            
+    // markers: true,            
     toggleActions: "play none play reverse",
     scrub: true
   },
@@ -552,7 +552,7 @@ const text3tl = gsap.timeline({
     trigger: ".section__text3",
     start: "top 70%",
     end: "bottom 30%",
-    markers: true,            
+    // markers: true,            
     toggleActions: "play none play reverse"
   },
   yoyo: true
