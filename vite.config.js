@@ -3,5 +3,5 @@ import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [tailwindcss()],
-  base: 'SAE3.03-NinoVilloutreix-DorianKhireddine'
+  base: '/SAE3.03-NinoVilloutreix-DorianKhireddine/'
 });
