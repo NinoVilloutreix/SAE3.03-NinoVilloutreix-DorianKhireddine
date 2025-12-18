@@ -472,15 +472,15 @@ const solutionstl = gsap.timeline({
 
 solutionstl.fromTo(
   ".img__herbier",
-  { x: -500, opacity: 0, scale:5, rotation:-30},
-  { x: 0, opacity: 1, duration: 1, scale:10, ease:"circ.inOut", rotation:30},
+  { x: -750, opacity: 0, scale:5, rotation:-30},
+  { x: -150, opacity: 1, duration: 1, scale:10, ease:"circ.inOut", rotation:30},
   "<"
 );
 
 solutionstl.fromTo(
   ".img__coral",
-  { x: 500, opacity: 0, scale:5, rotation:30},
-  { x: 0, opacity: 1, duration: 1, scale:10, ease:"circ.inOut", rotation:-30},
+  { x: 750, opacity: 0, scale:5, rotation:30},
+  { x: 150, opacity: 1, duration: 1, scale:10, ease:"circ.inOut", rotation:-30},
   "<"
 );
 
