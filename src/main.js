@@ -177,8 +177,8 @@ dilatationtl.fromTo(
 
 dilatationtl.fromTo(
   ".img__warning",
-  { x: -250, y: -300, opacity: 1, scale: 0, rotation: 60 },
-  { x: -200, y: -250, opacity: 1, duration: 1, scale: 1, rotation: -15, ease: "elastic.out"},
+  { x: -50, y: -300, opacity: 1, scale: 0, rotation: 60 },
+  { x: 0, y: -250, opacity: 1, duration: 1, scale: 5, rotation: -15, ease: "elastic.out"},
   "<0.3"
 );
 
@@ -191,8 +191,8 @@ dilatationtl.fromTo(
 
 dilatationtl.fromTo(
   ".img__arrow2",
-  { x: -400, y: 100, opacity: 0, scale: 0.5, rotation: 0 },
-  { x: -300, y: 200, opacity: 1, duration: 0.5, scale: 1.5, rotation: -60, ease: "back.out"},
+  { x: -600, y: 100, opacity: 0, scale: 0.5, rotation: 0 },
+  { x: -500, y: 200, opacity: 1, duration: 0.5, scale: 1.5, rotation: -60, ease: "back.out"},
   "<0.3"
 );
 
@@ -473,14 +473,14 @@ const solutionstl = gsap.timeline({
 solutionstl.fromTo(
   ".img__herbier",
   { x: -500, opacity: 0, scale:5, rotation:-30},
-  { x: 0, opacity: 1, duration: 1, scale:20, ease:"circ.inOut", rotation:30},
+  { x: 0, opacity: 1, duration: 1, scale:10, ease:"circ.inOut", rotation:30},
   "<"
 );
 
 solutionstl.fromTo(
   ".img__coral",
   { x: 500, opacity: 0, scale:5, rotation:30},
-  { x: 0, opacity: 1, duration: 1, scale:20, ease:"circ.inOut", rotation:-30},
+  { x: 0, opacity: 1, duration: 1, scale:10, ease:"circ.inOut", rotation:-30},
   "<"
 );
 
