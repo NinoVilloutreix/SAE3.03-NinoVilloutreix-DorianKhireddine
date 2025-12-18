@@ -30,6 +30,7 @@ body {
 
 /* aaa */
 @theme inline {
+    /* Color variables */
     --color-blue1: var(--clr-blue1);
     --color-blue2: var(--clr-blue2);
     --color-blue3: var(--clr-blue3);
@@ -50,8 +51,13 @@ body {
     --color-dark: var(--clr-dark);
 
 
-
+    /* Font variables */
     --font-baloo: var(--font);
+
+    /* Breakpoint variables*/
+    --breakpoint-5xl: 1636px;    
+
+
 
 }
 

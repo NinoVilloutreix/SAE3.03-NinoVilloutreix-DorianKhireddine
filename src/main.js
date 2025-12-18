@@ -153,8 +153,8 @@ text1tl.fromTo(
 const dilatationtl = gsap.timeline({
   scrollTrigger: {
     trigger: ".section__dilatation",
-    start: "top 45%",
-    end: "bottom 50%",
+    start: "top 60%",
+    end: "bottom 40%",
     // markers: true,            
     toggleActions: "play none play reverse"
   },
