@@ -15,12 +15,8 @@
   <a href="#Recherche">Recherche</a> •
   <a href="#Projet">Projet</a> •
   <a href="#Accessibilité">Accessibilité</a> •
-  <a href="#credits">Credits</a> •
-  <a href="#related">Related</a> •
-  <a href="#license">License</a>
 </p>
 
-![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif)
 
 ## Recherche
 
