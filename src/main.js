@@ -6,7 +6,7 @@ import "./style.css";
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(DrawSVGPlugin);
 
-console.log(DrawSVGPlugin);
+// console.log(DrawSVGPlugin);
 
 
 const sections = document.querySelectorAll(".grandsection");
