@@ -21,7 +21,7 @@ killerBtn.addEventListener("click", () => {
     ScrollTrigger.getAll().forEach(st => st.kill());
     gsap.set("*", { clearProps: "all" });
 
-    killerBtn.textContent = "Activer les animations";
+    killerBtn.textContent = "Mode animé";
   } else {
     // Nous n'avons pas trouvé de solution plus simple pour réactiver les animations GSAP une fois tuées
     location.reload();
@@ -493,14 +493,14 @@ const solutionstl = gsap.timeline({
 solutionstl.fromTo(
   ".img__herbier",
   { x: -500, opacity: 0, scale:0.5, rotation:-30},
-  { x: 0, opacity: 1, duration: 1, scale:1, ease:"circ.inOut", rotation:30},
+  { x: -200, opacity: 1, duration: 1, scale:1, ease:"circ.inOut", rotation:30},
   "<"
 );
 
 solutionstl.fromTo(
   ".img__coral",
   { x: 500, opacity: 0, scale:0.5, rotation:30},
-  { x: 0, opacity: 1, duration: 1, scale:1, ease:"circ.inOut", rotation:-30},
+  { x: 200, opacity: 1, duration: 1, scale:1, ease:"circ.inOut", rotation:-30},
   "<"
 );
 
