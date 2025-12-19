@@ -11,19 +11,24 @@ console.log(DrawSVGPlugin);
 
 const sections = document.querySelectorAll(".grandsection");
 
-// Killer Button
-// const killerBtn = document.querySelector("#killer-button");
+const killerBtn = document.querySelector("#killer-button");
+let animationsEnabled = true;
 
-// killerBtn.addEventListener("click", () => {
-//   if (animationsEnabled) {
-//     gsap.globalTimeline.pause();
-//     killerBtn.textContent = "Activer les animations";
-//   } else {
-//     gsap.globalTimeline.resume();
-//     killerBtn.textContent = "Désactiver les animations";
-//   }
-//   animationsEnabled = !animationsEnabled;
-// });
+killerBtn.addEventListener("click", () => {
+  if (animationsEnabled) {
+
+    gsap.globalTimeline.clear();
+    ScrollTrigger.getAll().forEach(st => st.kill());
+    gsap.set("*", { clearProps: "all" });
+
+    killerBtn.textContent = "Activer les animations";
+  } else {
+    // Nous n'avons pas trouvé de solution plus simple pour réactiver les animations GSAP une fois tuées
+    location.reload();
+  }
+  animationsEnabled = !animationsEnabled;
+});
+
 
 // //////////////////////////// GRANDSECTIONS (code donné par le professeur) ////////////////////////////
 sections.forEach((section) => {
@@ -67,8 +72,8 @@ const planettl = gsap.timeline({
 
 planettl.fromTo(
   ".img__planet",
-  { x: 500, opacity: 0, scale: 1 },
-  { x: 0, opacity: 1, duration: 1, scale: 3 }
+  { x: 500, opacity: 0, scale: 0.5 },
+  { x: 0, opacity: 1, duration: 1, scale: 1 }
 );
 
 planettl.fromTo(
@@ -130,8 +135,8 @@ const efferalgantl = gsap.timeline({
 
 
 efferalgantl.fromTo(".img__efferalgan",
-  { y: -1000, opacity: 0, scale: 1 },
-  { y: -200, opacity: 1, scale: 3, ease: "circ.out" }
+  { y: -1000, opacity: 0, scale: 0.5 },
+  { y: -200, opacity: 1, scale: 1.5, ease: "circ.out" }
 );
 
 
@@ -139,7 +144,7 @@ efferalgantl.fromTo(".img__efferalgan",
 efferalgantl.to(".img__efferalgan", {
   y: 50,
   opacity: 0,
-  scale: 1,
+  scale: 0.5,
   ease: "circ.in",
 });
 
@@ -177,8 +182,8 @@ const dilatationtl = gsap.timeline({
 
 dilatationtl.fromTo(
   ".img__dilatation",
-  { x: -100, y: -100, opacity: 0, scale: 8 },
-  { x: 300, y: -100, opacity: 1, duration: 0.5, scale: 7 }
+  { x: -100, y: -100, opacity: 0, scale: 1 },
+  { x: 300, y: -100, opacity: 1, duration: 0.5, scale: 2 }
 );
 
 dilatationtl.fromTo(
@@ -198,22 +203,23 @@ dilatationtl.fromTo(
 
 dilatationtl.fromTo(
   ".img__arrow1",
-  { x: 50, y: -300, opacity: 0, scaleX: -0.5, scaleY: 0.5, rotation: 0 },
-  { x: 300, y: -200, opacity: 1, duration: 0.5, scaleX: -1, scaleY: 1, rotation: -45, ease: "back.out"},
+  { x: -100, y: 0, opacity: 0, scale: 0.5 },
+  { x: 300, y: 0, opacity: 1, duration: 0.5, scale: 1, ease: "back.out"},
   "<0.3"
 );
 
 dilatationtl.fromTo(
   ".img__arrow2",
-  { x: -200, y: 100, opacity: 0, scale: 0.5, rotation: 0 },
-  { x: -100, y: 200, opacity: 1, duration: 0.5, scale: 1.5, rotation: -60, ease: "back.out"},
+  { x: -100, y: 0, opacity: 0, scaleX: 0.5, scaleY: -0.5, rotation:0 },
+  { x: 300, y: -125, opacity: 1, duration: 0.5, scaleX: 1, scaleY: -1, ease: "back.out", rotation:120},
   "<0.3"
 );
 
 dilatationtl.set(
   ".img__lisere-container",
   {
-    scale: 2.0
+    scale: 2.0,
+    x: 500,
   }
   
 )
@@ -255,8 +261,8 @@ const acidetl = gsap.timeline({
 
 acidetl.fromTo(
   ".img__acide",
-  { x: 500, opacity: 0, scale: 1 },
-  { x: 0, opacity: 1, duration: 1, scale: 3 }
+  { x: 500, opacity: 0, scale: 0.5 },
+  { x: 0, opacity: 1, duration: 1, scale: 1 }
 );
 
 acidetl.fromTo(
@@ -281,8 +287,8 @@ const monteetl = gsap.timeline({
 
 monteetl.fromTo(
   ".img__montee",
-  { x: -500, opacity: 0, scale: 1 },
-  { x: 0, opacity: 1, duration: 1, scale: 3 }
+  { x: -500, opacity: 0, scale: 0.5 },
+  { x: 0, opacity: 1, duration: 1, scale: 1 }
 );
 
 monteetl.fromTo(
@@ -327,8 +333,8 @@ const glaciertl = gsap.timeline({
 
 glaciertl.fromTo(
   ".img__glacier",
-  { x: 500, opacity: 0, scale: 1 },
-  { x: 0, opacity: 1, duration: 1, scale: 3, ease: "back.out" }
+  { x: 500, opacity: 0, scale: 0.5 },
+  { x: 0, opacity: 1, duration: 1, scale: 1, ease: "back.out" }
 );
 
 glaciertl.fromTo(
@@ -353,8 +359,8 @@ const ourstl = gsap.timeline({
 
 ourstl.fromTo(
   ".img__ours",
-  { x: -500, opacity: 0, scale: 1 },
-  { x: 0, opacity: 1, duration: 1, scale: 3, ease: "back.out" }
+  { x: -500, opacity: 0, scale: 0.5 },
+  { x: 0, opacity: 1, duration: 1, scale: 1, ease: "back.out" }
 );
 
 ourstl.fromTo(
@@ -379,8 +385,8 @@ const distancetl = gsap.timeline({
 
 distancetl.fromTo(
   ".img__distance",
-  { y: 200, opacity: 0, scaleX: 5, scaleY: 0 },
-  { y: 0, opacity: 1, duration: 1, scaleX: 3, scaleY: 3, ease: "elastic.out" }
+  { y: 200, opacity: 0, scaleX: 2, scaleY: 0 },
+  { y: 0, opacity: 1, duration: 1, scaleX: 1, scaleY: 1, ease: "elastic.out" }
 );
 
 distancetl.fromTo(
@@ -405,8 +411,8 @@ const iletl = gsap.timeline({
 
 iletl.fromTo(
   ".img__ile",
-  { y: 200, opacity: 0, scaleX: 5, scaleY: 0},
-  { y: 0, opacity: 1, duration: 1, scaleX: 3, scaleY: 3, ease: "elastic.out"}
+  { y: 200, opacity: 0, scaleX: 2, scaleY: 0},
+  { y: 0, opacity: 1, duration: 1, scaleX: 1, scaleY: 1, ease: "elastic.out"}
 );
 
 iletl.fromTo(
@@ -457,8 +463,8 @@ const recherchetl = gsap.timeline({
 
 recherchetl.fromTo(
   ".img__recherche",
-  { y: 200, opacity: 0, scaleX: 5, scaleY: 0, rotation: 45 },
-  { y: 0, opacity: 1, duration: 1, scaleX: 3, scaleY: 3, ease: "elastic.out" , rotation: 0}
+  { y: 200, opacity: 0, scaleX: 2, scaleY: 0, rotation: 45 },
+  { y: 0, opacity: 1, duration: 1, scaleX: 1, scaleY: 1, ease: "elastic.out" , rotation: 0}
 );
 
 recherchetl.fromTo(
@@ -486,15 +492,15 @@ const solutionstl = gsap.timeline({
 
 solutionstl.fromTo(
   ".img__herbier",
-  { x: -750, opacity: 0, scale:5, rotation:-30},
-  { x: -150, opacity: 1, duration: 1, scale:10, ease:"circ.inOut", rotation:30},
+  { x: -500, opacity: 0, scale:0.5, rotation:-30},
+  { x: 0, opacity: 1, duration: 1, scale:1, ease:"circ.inOut", rotation:30},
   "<"
 );
 
 solutionstl.fromTo(
   ".img__coral",
-  { x: 750, opacity: 0, scale:5, rotation:30},
-  { x: 150, opacity: 1, duration: 1, scale:10, ease:"circ.inOut", rotation:-30},
+  { x: 500, opacity: 0, scale:0.5, rotation:30},
+  { x: 0, opacity: 1, duration: 1, scale:1, ease:"circ.inOut", rotation:-30},
   "<"
 );
 
@@ -539,8 +545,8 @@ const panneautl = gsap.timeline({
 
 
 panneautl.fromTo(".img__panneau",
-  { y: 1000, opacity: 0, scale: 1, rotation: 0},
-  { y: 200, opacity: 1, scale: 3, ease: "circ.out", rotation: 390 }
+  { y: 1000, opacity: 0, scale: 0.35, rotation: 0},
+  { y: 200, opacity: 1, scale: 1, ease: "circ.out", rotation: 390 }
 );
 
 
