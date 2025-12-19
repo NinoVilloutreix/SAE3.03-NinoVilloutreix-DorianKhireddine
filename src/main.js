@@ -11,7 +11,21 @@ console.log(DrawSVGPlugin);
 
 const sections = document.querySelectorAll(".grandsection");
 
+// Killer Button
+// const killerBtn = document.querySelector("#killer-button");
 
+// killerBtn.addEventListener("click", () => {
+//   if (animationsEnabled) {
+//     gsap.globalTimeline.pause();
+//     killerBtn.textContent = "Activer les animations";
+//   } else {
+//     gsap.globalTimeline.resume();
+//     killerBtn.textContent = "Désactiver les animations";
+//   }
+//   animationsEnabled = !animationsEnabled;
+// });
+
+// //////////////////////////// GRANDSECTIONS (code donné par le professeur) ////////////////////////////
 sections.forEach((section) => {
   const color = section.getAttribute("data-bgcolor");
 
@@ -568,6 +582,36 @@ text3tl.fromTo(
 
 
 
+// ################## WATERFALL ##################
+import { DotLottie } from "@lottiefiles/dotlottie-web";
+
+const dotLottie = new DotLottie({
+  canvas: document.querySelector("#img__waterfall"),
+  src: "https://lottie.host/578b1840-dcd8-4db2-b68c-32a301efe8a4/xyusMhbYkw.lottie",
+  autoplay: true,
+  loop: true,
+});
+
+dotLottie.load();
+
+const animation = new DotLottie({
+  canvas: document.querySelector("#canvas"),
+  src: "https://path-to-your-animation.lottie",
+  autoplay: true,
+  loop: true,
+  speed: 1.5, // Vitesse de lecture (1 = normale)
+  backgroundColor: "#f0f0f0", // Couleur de fond du canvas
+  segment: [10, 50], // Jouer uniquement les frames de 10 à 50
+  renderConfig: {
+    autoResize: true, // Redimensionnement automatique
+    devicePixelRatio: window.devicePixelRatio || 1, // Netteté sur écrans haute densité
+  },
+  layout: {
+    fit: "contain", // 'contain', 'cover', 'fill', 'fit-width', 'fit-height', 'none'
+    align: [0.5, 0.5], // Alignement [x, y] (0.5 = centre)
+  },
+});
+
 
 
 // ################## BOITE ##################
@@ -594,7 +638,7 @@ lignes.forEach((ligne, i) => {
 });
 
 
-boitetl.fromTo(
+gsap.fromTo(
   ".text__boite",
   { y: 100, opacity: 0, scale: 1 },
   { y: 0, opacity: 1, duration: 1, scale: 1 },
